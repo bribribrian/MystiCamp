@@ -3,9 +3,9 @@ import SplashNav from './splash_nav';
 import { logout } from '../../actions/session_actions';
 
 
-const mSTP = ({ session, users}) => {
+const mSTP = ({ session, entities}) => {
     return{
-        currentUser: users[session.id]
+        currentUser: entities.users[session.id]
     };
 };
 

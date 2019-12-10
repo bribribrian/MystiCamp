@@ -58,7 +58,7 @@ class SignUpForm extends React.Component {
                 <input type="submit" value="Sign Up!" />
               </form>
               <h3>Already a Hipcamper?</h3>
-              <Link to='/'>Log in!</Link>
+              <Link to='/login'>Log in!</Link>
             </div>
         
         );
