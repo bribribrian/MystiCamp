@@ -1,4 +1,4 @@
-class SessionsController < ApplicationController
+class Api::SessionsController < ApplicationController
    
     def create
         @user = User.find_by_credentials(
@@ -8,14 +8,15 @@ class SessionsController < ApplicationController
         
         if @user
             login(@user)
-            render ""
+            # render ""
+            render json: @user
         else   
-            render json: ["Invalid Credentials!"], status 401
+            render json: ["Invalid Credentials!"], status: 401
         end
     end
 
     def destroy
         logout
-        render ""
+        render json: ["logout successful"]
     end
 end
