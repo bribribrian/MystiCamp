@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { signup } from '../../actions/session_actions';
 import { Link } from 'react-router-dom';
+import { closeModal } from '../../actions/modal_actions';
 
 
 
@@ -21,13 +22,14 @@ class SignUpForm extends React.Component {
     
     handleSubmit(e) {
         e.preventDefault();
-        const user = Object.assign({}, this.state)
-        this.props.action(user);
+        const user = Object.assign({}, this.state);
+        this.props.action(user)
+        .then(() => this.props.closeModal());
     }
 
     render() {
         return (
-            <div>
+            <div className='signup-form'>
               <form onSubmit={this.handleSubmit}>
                 MystiCamp
                 <br/>
@@ -68,10 +70,11 @@ class SignUpForm extends React.Component {
 const mSTP = (errors) => ({
     errors: errors,
     formType: "sign up"
-})
+});
 
 const mDTP = dispatch => ({
     action: (user) => dispatch(signup(user)),
-})
+    closeModal: () => dispatch(closeModal())
+});
 
 export default connect(mSTP, mDTP)(SignUpForm);

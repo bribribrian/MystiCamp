@@ -1,0 +1,46 @@
+.modal-background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+  }
+
+  .modal-child {
+    width: 330px;
+    margin: 0 auto;
+    margin-top: 31px;
+    background: lightseagreen;
+    .modal-content{
+        background: red;
+    }
+    .modal-body {
+        padding: 15px;
+    }
+  }
+
+  .login-form {
+      height: 537px;
+      background: lightgrey
+      
+  }
+
+  .login-greet {
+      width: 300px;
+      height: 60px;
+
+  }
+
+//   .login-form-body {
+//       height: 100%;
+//       background: greenyellow;
+//         text-align: center;
+//   }
+
+  .signup-form {
+    height: 470px;
+    background: lightseagreen
+    
+}

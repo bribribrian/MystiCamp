@@ -1,0 +1,28 @@
+.nav {
+    display: flex;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+    .left {
+    }
+    .right {
+        display: flex;
+        width: 551px;
+        justify-content: space-between;
+        align-items: center;
+        .menu {
+            width: 387px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .splash-nav-container {
+            .splash-nav-container-buttons {
+                width: 163px;
+                display:flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+    }
+}
