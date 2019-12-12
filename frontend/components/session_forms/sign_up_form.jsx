@@ -10,8 +10,10 @@ class SignUpForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            f_name: 'First name...',
+            l_name: 'Last name...',
             username: "Username...",
-            email: "Email adress...",
+            email: "Email address...",
             password: "Password...",
         };
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -34,12 +36,18 @@ class SignUpForm extends React.Component {
                 <div className='signup-form'>
                 <form onSubmit={this.handleSubmit}>
                     <div className='signup-greet'>
-                    <h3>Join Hipcamp</h3>
-                    <h4>Discover the best camping near me</h4>
+                        <div className='signup-welcome'>Join Hipcamp</div>
+                        <div className='signup-welcome-subtitle'>Discover the best camping near me</div>
                     </div>
                     <div className='name-inputs'>
-                    First name...
-                    Last name...
+                        <input className='f-name-input' type="text" 
+                            value={this.state.f_name}
+                            onChange={this.update('f_name')}
+                        />
+                        <input className='l-name-input' type="text" 
+                            value={this.state.l_name}
+                            onChange={this.update('l_name')}
+                        />
                     </div>
                     <label>
                         <input type="text" 
@@ -64,7 +72,7 @@ class SignUpForm extends React.Component {
                 </form>
                 </div>
                 </div>
-                <div className='modal-signup-footer'>
+                <div className='modal-footer'>
                     <h3>Already a Hipcamper?
                     <Link to='/login'>Log in!</Link>
                     </h3>

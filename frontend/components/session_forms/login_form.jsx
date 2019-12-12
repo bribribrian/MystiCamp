@@ -8,8 +8,8 @@ class LoginForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            username: "Username",
-            password: "Password"
+            username: "",
+            password: ""
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -36,34 +36,37 @@ class LoginForm extends React.Component {
                                 </div>
                                 <br/>
                                 <button className='facebook-button'>Log in with Facebook</button>
+                                <div className='or-style'>
+                                <hr/>
                                 <div className='or'>
                                     or
                                 </div>
+                                </div>
                                 <label>
-                                    <input className='username-input' type="text" 
+                                    <input className='username-input' type="text" placeholder="Username"
                                         value={this.state.username}
                                         onChange={this.update('username')}
                                     />
                                 </label>
                                 <br/>
-                            <label>
-                                <input type="password"
+                                 <label>
+                                <input type="password" placeholder="Password"
                                     value={this.state.password}
                                     onChange={this.update('password')}
                                     />
-                            </label>
-                            <div>
+                                </label>
+                                <div className="password-question">
                                 Forgot your password?
-                            </div>
+                                </div>
                             <br/>
                             <input className='log-in-button' type="submit" value="Log In" />
+                            <div className='modal-footer'>
+                                <div className='footer-question'>Don't have a Hipcamp account?
+                                    <Link className='footer-link' to='/signup'> Sign up!</Link>
+                                </div>
+                            </div>
                         </form>
                     </div>
-                </div>
-                <div className='modal-login-footer'>
-                    <div className='footer-question'>Don't have a Hipcamp account?
-                     <Link to='/signup'>Log In</Link>
-                     </div>
                 </div>
             </div>
         
