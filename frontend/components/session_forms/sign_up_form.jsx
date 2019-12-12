@@ -62,11 +62,16 @@ class SignUpForm extends React.Component {
                                     value={this.state.password}
                                     onChange={this.update('password')}
                                 />
+                                <div className="form-question-signup">
+                                <span className='placeholder-box'></span> I'm curious about sharing my land with campers
+                                </div>
                                 <br/>
                                 <input className='submit-button-style' type="submit" value="Join Hipcamp" />
+                                <div className='privacy-policy-agreement'>By signing up, I agree to Hipcamp's</div>
+                                 <div className='privacy-policy-agreement-2'>terms and privacy policy.</div>
                                 <div className='modal-footer'>
                                     <div className='footer-question'>Already a Hipcamper?
-                                        <Link className='footer-link' to='/login'>Log in!</Link>
+                                        <Link className='footer-link' to='/login'> Log in!</Link>
                                     </div>
                                 </div>
                             </form>

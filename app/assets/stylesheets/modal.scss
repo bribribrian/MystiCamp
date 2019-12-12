@@ -1,18 +1,19 @@
 .modal-background {
     position: fixed;
+    overflow: scroll;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(255, 255, 255, 0.9);
     z-index: 10;
-  }
-
+}
   .modal-child {
     width: 330px;
     margin: 0 auto;
     margin-top: 31px;
     background: white;
+    box-shadow: 1px 1px 9px 7px rgb(230, 227, 227);
     .modal-content{
         background: white;
         button {
@@ -21,10 +22,14 @@
         input {
             box-sizing: border-box;
             width: 100%;
-            padding: 26px;
+            padding: 25px;
+            padding-top: 25px;
             border: 1px solid black;
             margin-top: 5px;
-            margin-bottom: 5px;
+            margin-bottom: 4px;
+            font-size: 15px;
+            font-weight: 600;
+            color: black;
         }  
         hr {
             display: block;
@@ -42,21 +47,22 @@
         text-align: center;
         .modal-form {
             font-family: helvetica;
-            height: 505px;
             background: white;
             .form-greet {
                 width: 300px;
                 height: 60px;
                 text-align: center;
                 .form-welcome {
-                    font-size: 20px;
+                    font-size: 21px;
                     font-weight: bold;
-                    margin-top: 15px;
+                    // margin-top: 15px;
                     margin-bottom: 10px;
+                    padding-top: 13px;
                 }
                 .form-welcome-subtitle {
                     font-weight: lighter;
                     color: grey;
+                    font-size: 14px;
                 }
             }
             .facebook-button {
@@ -67,6 +73,7 @@
                 background-color: rgb(65, 90, 148);
                 padding: 26px;
                 margin-bottom: 10px;
+                margin-top: 13px;
             }
             .or {
                 width: 41px;
@@ -78,16 +85,28 @@
                 color: grey;
 
             }
-            
-
             .username-input {
                 margin-top: 15px;
             }
-            .password-question {
+            .form-question-login {
                 margin-top: 13px;
                 text-align: right;
                 font-size: 12px;
                 color: grey;
+                font-weight: lighter;
+            }
+            .placeholder-box {
+                width: 11px;
+                height: 11px;
+                display: inline-block;
+                border: 1px solid black;
+            }
+            .form-question-signup {
+                margin-top: 10px;
+                margin-bottom: 26px;
+                text-align: left;
+                font-size: 12px;
+                color: black;
                 font-weight: lighter;
             }
             .submit-button-style {
@@ -105,8 +124,21 @@
                 color: white;
                 background-color: rgb(94, 199, 159);
             }
+            .privacy-policy-agreement {
+                margin-top: 14px;
+                padding: 0px 40px;
+                font-size: 12px;
+                font-weight: lighter;
+            }
+            .privacy-policy-agreement-2 {
+                margin-top: 9px;
+                padding: 0px 40px;
+                font-size: 12px;
+                font-weight: lighter;
+                margin-bottom: 20px;
+            }
             .modal-footer {
-                margin-top: 25px;
+                margin-top: 30px;
                 font-weight: lighter;
                 text-align: center;
                 font-size: 13px;
@@ -118,57 +150,22 @@
             text-decoration: none;
             font-weight: 600;
         }
-       
-            // .name-inputs {
-            //     display: flex;
-            //     width: 100%;
-            //     box-sizing: border-box;
-
-            //     .f-name-input {
-            //         width: 35%;
-            //     }
-            //     .l-name-input {
-            //         width: 35%;
-
-            //     }
-            // } 
-            // .log-in-button {
-            //     -webkit-transition-duration: 0.4s;
-            //     transition-duration: 0.4s;
-            //     color: white;
-            //     background-color: rgb(49, 228, 168);
-            //     border: none;
-            //     font-size: 15px;
-            //     font-weight: bold;
-            // }
-            // .log-in-button:hover {
-            //     border: 3px solid rgb(49, 228, 168);
-            //     color: rgb(49, 228, 168);
-            // }
-
-            // .modal-signup-footer {
-            //     padding:15px;
-            //     text-align: center;
-            // }
-    .signup-form {
-            // height: 956px;
-            height: 550px;
-            background: lightseagreen;
+        .signup-form {
+            background: white;
             font-family: helvetica;
-    }
-
-
-
+            // padding: 15px 0;
+        }
         .name-inputs {
             display: flex;
             width: 100%;
             box-sizing: border-box;
             justify-content: space-between;
+            margin-top: 23px;
             .f-name-input {
                 width: 145px;
             }
             .l-name-input {
-                width: 145;
+                width: 145px;
 
             }
         } 

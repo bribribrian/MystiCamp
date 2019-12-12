@@ -51,7 +51,7 @@ class LoginForm extends React.Component {
                                     value={this.state.password}
                                     onChange={this.update('password')}
                                 />
-                                <div className="password-question">
+                                <div className="form-question-login">
                                 Forgot your password?
                                 </div>
                             <br/>
