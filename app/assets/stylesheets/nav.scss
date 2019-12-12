@@ -3,26 +3,72 @@
     height: 70px;
     align-items: center;
     justify-content: space-between;
+    background-color: white;
     .left {
+        .logo {
+                font-size: 27px;
+                padding: 29px;
+                font-family: helvetica;
+                font-weight: bold;
+        }
     }
     .right {
         display: flex;
         width: 551px;
+        margin-right: 5px;
         justify-content: space-between;
         align-items: center;
         .menu {
+            padding-left: 40px;
             width: 387px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            li {
+                // padding: 0px 6px;
+                justify-content: space-around;
+                font-family: helvetica;
+                font-weight: lighter;
+                font-size: 15px;
+            }
         }
+
         .splash-nav-container {
             .splash-nav-container-buttons {
+                padding: 0px 5px 0px 5px;
                 width: 163px;
                 display:flex;
                 align-items: center;
                 justify-content: space-between;
+                .log-in-button {
+                    padding: 0px 20px 0px 6px;
+                    border: none;
+                    font-size: 15px;
+                }
+                .log-in-button:hover {
+                    
+                }   
+                .sign-up-button {
+                    -webkit-transition-duration: 0.4s;
+                    transition-duration: 0.4s;
+                    border: 3px solid rgb(49, 228, 168);
+                    color: rgb(49, 228, 168);;
+                    background-color: white;
+                    font-size: 16px;
+                    padding: 10px;
+
+                }
+                .sign-up-button:hover {
+                    color: white;
+                    background-color: rgb(49, 228, 168);;
+
+
+
+                }
             }
+            // .logged-in-nav {
+                
+            // }
         }
     }
 }

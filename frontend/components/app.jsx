@@ -13,14 +13,14 @@ const App = () => (
         <header>
             <nav className='nav'>
                 <div className='left'>
-                    <h2>MystiCamp</h2>
+                    <div className='logo'>MystiCamp</div>
                 </div>
                 <div className='right'>
                     <ul className='menu'>
-                        <li>Near Me</li>
-                        <li>Become a Host</li>
-                        <li>About</li>
-                        <li>Earn Hipcash</li>
+                        <li><a>Near Me</a></li>
+                        <li><a>Become a Host</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Earn Hipcash</a></li>
                     </ul>
                     <div className='splash-nav-container'>
                         <SplashNavContainer />

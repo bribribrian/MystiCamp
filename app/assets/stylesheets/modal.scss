@@ -14,33 +14,97 @@
     margin-top: 31px;
     background: lightseagreen;
     .modal-content{
-        background: red;
+        background: white;
+        button {
+            width: 100%;
+        }  
+        input {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 26px;
+            border: 1px solid black;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }  
     }
     .modal-body {
         padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        .login-form {
+            font-family: helvetica;
+            height: 465px;
+            background: white;
+            .login-greet {
+                width: 300px;
+                height: 60px;
+                text-align: center;
+                .welcome-title {
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin-top: 15px;
+                    margin-bottom: 10px;
+                }
+                .welcome-subtitle {
+                    font-weight: lighter;
+                    color: grey;
+                }
+            }
+            .facebook-button {
+                border: none;
+                font-size: 15px;
+                font-weight: bold;
+                color: white;
+                background-color: rgb(65, 90, 148);
+                padding: 26px;
+                margin-bottom: 10px;
+
+            }
+            .or {
+            }
+            .username-input {
+                margin-top: 15px;
+            }
+            .log-in-button {
+                -webkit-transition-duration: 0.4s;
+                transition-duration: 0.4s;
+                color: white;
+                background-color: rgb(49, 228, 168);
+                border: none;
+                font-size: 15px;
+                font-weight: bold;
+            }
+            .sign-up-button:hover {
+                border: 3px solid rgb(49, 228, 168);
+                color: rgb(49, 228, 168);
+            }
+            .modal-login-footer {
+                padding:15px;
+                text-align: center;
+                display: flex;
+                justify-items: center;
+                .footer-question {
+                }
+            }
+        }
+        .signup-form {
+            // height: 956px;
+            height: 550px;
+            background: lightseagreen;
+            .signup-greet {
+                width: 300px;
+                height: 60px;
+                text-align: center; 
+                .name-inputs {
+                } 
+            }
+            .modal-signup-footer {
+                padding:15px;
+                text-align: center;
+            }
+        }
+
     }
-  }
-
-  .login-form {
-      height: 537px;
-      background: lightgrey
-      
-  }
-
-  .login-greet {
-      width: 300px;
-      height: 60px;
-
-  }
-
-//   .login-form-body {
-//       height: 100%;
-//       background: greenyellow;
-//         text-align: center;
-//   }
-
-  .signup-form {
-    height: 470px;
-    background: lightseagreen
-    
 }
