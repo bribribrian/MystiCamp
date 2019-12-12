@@ -28,38 +28,34 @@ class LoginForm extends React.Component {
         return (
             <div className='modal-content'>
                 <div className='modal-body'>
-                    <div className='login-form'>
+                    <div className='modal-form'>
                             <form onSubmit={this.handleSubmit}>
-                                <div className='login-greet'>
-                                    <div className='welcome-title'>Welcome back!</div>
-                                    <div className='welcome-subtitle'>It's about time for another camping trip</div>
+                                <div className='form-greet'>
+                                    <div className='form-welcome'>Welcome back!</div>
+                                    <div className='form-welcome-subtitle'>It's about time for another camping trip</div>
                                 </div>
                                 <br/>
                                 <button className='facebook-button'>Log in with Facebook</button>
                                 <div className='or-style'>
-                                <hr/>
-                                <div className='or'>
-                                    or
+                                    <hr/>
+                                    <div className='or'>
+                                        or
+                                    </div>
                                 </div>
-                                </div>
-                                <label>
-                                    <input className='username-input' type="text" placeholder="Username"
-                                        value={this.state.username}
-                                        onChange={this.update('username')}
-                                    />
-                                </label>
+                                <input className='username-input' type="text" placeholder="Username..."
+                                    value={this.state.username}
+                                    onChange={this.update('username')}
+                                />
                                 <br/>
-                                 <label>
-                                <input type="password" placeholder="Password"
+                                <input type="password" placeholder="Password..."
                                     value={this.state.password}
                                     onChange={this.update('password')}
-                                    />
-                                </label>
+                                />
                                 <div className="password-question">
                                 Forgot your password?
                                 </div>
                             <br/>
-                            <input className='log-in-button' type="submit" value="Log In" />
+                            <input className='submit-button-style' type="submit" value="Log In" />
                             <div className='modal-footer'>
                                 <div className='footer-question'>Don't have a Hipcamp account?
                                     <Link className='footer-link' to='/signup'> Sign up!</Link>

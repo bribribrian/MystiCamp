@@ -40,21 +40,21 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        .login-form {
+        .modal-form {
             font-family: helvetica;
             height: 505px;
             background: white;
-            .login-greet {
+            .form-greet {
                 width: 300px;
                 height: 60px;
                 text-align: center;
-                .welcome-title {
+                .form-welcome {
                     font-size: 20px;
                     font-weight: bold;
                     margin-top: 15px;
                     margin-bottom: 10px;
                 }
-                .welcome-subtitle {
+                .form-welcome-subtitle {
                     font-weight: lighter;
                     color: grey;
                 }
@@ -68,14 +68,6 @@
                 padding: 26px;
                 margin-bottom: 10px;
             }
-            .or-style {
-                // display: flex;
-                // justify-content: space-around;
-            }
-            // .or-line{
-            //     height: 1px;
-            //     border-style: inset;
-            // }
             .or {
                 width: 41px;
                 margin: 0 auto;
@@ -86,6 +78,8 @@
                 color: grey;
 
             }
+            
+
             .username-input {
                 margin-top: 15px;
             }
@@ -96,7 +90,7 @@
                 color: grey;
                 font-weight: lighter;
             }
-            .log-in-button {
+            .submit-button-style {
                 -webkit-transition-duration: 0.4s;
                 transition-duration: 0.4s;
                 color: white;
@@ -106,7 +100,7 @@
                 font-weight: bold;
                 margin-top: -5px;
             }
-            .log-in-button:hover {
+            .submit-button-style:hover {
                 // border: 3px solid rgb(49, 228, 168);
                 color: white;
                 background-color: rgb(94, 199, 159);
@@ -124,59 +118,60 @@
             text-decoration: none;
             font-weight: 600;
         }
-        .signup-form {
+       
+            // .name-inputs {
+            //     display: flex;
+            //     width: 100%;
+            //     box-sizing: border-box;
+
+            //     .f-name-input {
+            //         width: 35%;
+            //     }
+            //     .l-name-input {
+            //         width: 35%;
+
+            //     }
+            // } 
+            // .log-in-button {
+            //     -webkit-transition-duration: 0.4s;
+            //     transition-duration: 0.4s;
+            //     color: white;
+            //     background-color: rgb(49, 228, 168);
+            //     border: none;
+            //     font-size: 15px;
+            //     font-weight: bold;
+            // }
+            // .log-in-button:hover {
+            //     border: 3px solid rgb(49, 228, 168);
+            //     color: rgb(49, 228, 168);
+            // }
+
+            // .modal-signup-footer {
+            //     padding:15px;
+            //     text-align: center;
+            // }
+    .signup-form {
             // height: 956px;
             height: 550px;
             background: lightseagreen;
             font-family: helvetica;
-            .signup-greet {
-                width: 300px;
-                height: 60px;
-                text-align: center; 
-                .signup-welcome {
-                    font-size: 20px;
-                    font-weight: bold;
-                    margin-top: 15px;
-                    margin-bottom: 10px;
-                }
-                .signup-welcome-subtitle {
-                    font-size: 15px;
-                    font-weight: lighter;
-                    color: grey;
-                }
-            }
-            .name-inputs {
-                display: flex;
-                width: 100%;
-                box-sizing: border-box;
+    }
 
-                .f-name-input {
-                    width: 35%;
-                }
-                .l-name-input {
-                    width: 35%;
 
-                }
-            } 
-            .log-in-button {
-                -webkit-transition-duration: 0.4s;
-                transition-duration: 0.4s;
-                color: white;
-                background-color: rgb(49, 228, 168);
-                border: none;
-                font-size: 15px;
-                font-weight: bold;
-            }
-            .log-in-button:hover {
-                border: 3px solid rgb(49, 228, 168);
-                color: rgb(49, 228, 168);
-            }
 
-            .modal-signup-footer {
-                padding:15px;
-                text-align: center;
+        .name-inputs {
+            display: flex;
+            width: 100%;
+            box-sizing: border-box;
+            justify-content: space-between;
+            .f-name-input {
+                width: 145px;
             }
-        }
+            .l-name-input {
+                width: 145;
+
+            }
+        } 
 
     }
 }

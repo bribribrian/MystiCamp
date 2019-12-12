@@ -10,11 +10,11 @@ class SignUpForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            f_name: 'First name...',
-            l_name: 'Last name...',
-            username: "Username...",
-            email: "Email address...",
-            password: "Password...",
+            f_name: "",
+            l_name: "",
+            username: "",
+            email: "",
+            password: "",
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -33,49 +33,45 @@ class SignUpForm extends React.Component {
         return (
             <div className='modal-content'>
                 <div className='modal-body'>
-                <div className='signup-form'>
-                <form onSubmit={this.handleSubmit}>
-                    <div className='signup-greet'>
-                        <div className='signup-welcome'>Join Hipcamp</div>
-                        <div className='signup-welcome-subtitle'>Discover the best camping near me</div>
+                    <div className='modal-form'>
+                        <div className='signup-form'>
+                            <form onSubmit={this.handleSubmit}>
+                                <div className='form-greet'>
+                                    <div className='form-welcome'>Join Hipcamp</div>
+                                    <div className='form-welcome-subtitle'>Discover the best camping near me</div>
+                                </div>
+                                <div className='name-inputs'>
+                                    <input className='f-name-input' type="text" placeholder="First name..."
+                                        value={this.state.f_name}
+                                        onChange={this.update('f_name')}
+                                    />
+                                    <input className='l-name-input' type="text" placeholder="Last name..."
+                                        value={this.state.l_name}
+                                        onChange={this.update('l_name')}
+                                    />
+                                </div>
+                                <input type="text" placeholder="Email address..."
+                                    value={this.state.email}
+                                    onChange={this.update('email')}
+                                />
+                                <input type="text" placeholder="Username..."
+                                    value={this.state.username}
+                                    onChange={this.update('username')}
+                                />
+                                <input type="password" placeholder="Password..."
+                                    value={this.state.password}
+                                    onChange={this.update('password')}
+                                />
+                                <br/>
+                                <input className='submit-button-style' type="submit" value="Join Hipcamp" />
+                                <div className='modal-footer'>
+                                    <div className='footer-question'>Already a Hipcamper?
+                                        <Link className='footer-link' to='/login'>Log in!</Link>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <div className='name-inputs'>
-                        <input className='f-name-input' type="text" 
-                            value={this.state.f_name}
-                            onChange={this.update('f_name')}
-                        />
-                        <input className='l-name-input' type="text" 
-                            value={this.state.l_name}
-                            onChange={this.update('l_name')}
-                        />
-                    </div>
-                    <label>
-                        <input type="text" 
-                            value={this.state.email}
-                            onChange={this.update('email')}
-                        />
-                    </label>
-                    <label>
-                        <input type="text" 
-                            value={this.state.username}
-                            onChange={this.update('username')}
-                        />
-                    </label>
-                    <label>
-                        <input type="password"
-                            value={this.state.password}
-                            onChange={this.update('password')}
-                        />
-                    </label>
-                    <br/>
-                    <input type="submit" value="Sign Up!" />
-                </form>
-                </div>
-                </div>
-                <div className='modal-footer'>
-                    <h3>Already a Hipcamper?
-                    <Link to='/login'>Log in!</Link>
-                    </h3>
                 </div>
             </div>
         
