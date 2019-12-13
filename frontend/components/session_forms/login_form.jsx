@@ -12,6 +12,7 @@ class LoginForm extends React.Component {
             password: ""
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleSubmitDemo = this.handleSubmit.bind(this);
     }
     update(field) {
         return (e) => this.setState({ [field]: e.currentTarget.value });
@@ -23,7 +24,7 @@ class LoginForm extends React.Component {
         this.props.action(user)
         .then(this.props.closeModal);
     }
-
+    
     render() {
         return (
             <div className='modal-content'>
@@ -56,6 +57,7 @@ class LoginForm extends React.Component {
                                 </div>
                             <br/>
                             <input className='submit-button-style' type="submit" value="Log In" />
+                            <button className='demo-user-login' onClick={() => {this.state = { username: 'Demo_User', password: 'password'}}}>Demo user!</button>
                             <div className='modal-footer'>
                                 <div className='footer-question'>Don't have a Hipcamp account?
                                     <Link className='footer-link' to='/signup'> Sign up!</Link>

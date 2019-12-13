@@ -20,6 +20,7 @@
         align-items: center;
         .menu {
             padding-left: 40px;
+            padding-right: 6px;
             width: 387px;
             display: flex;
             align-items: center;
@@ -41,11 +42,17 @@
                 align-items: center;
                 justify-content: space-between;
                 .log-in-button {
-                    padding: 0px 20px 0px 6px;
+                    padding: 0px 0px 0px 0px;
                     border: none;
                     font-size: 15px;
+                    margin-right: 5px;
                 }
                 .log-in-button:hover {
+                    margin-top: 4px;
+                    padding-bottom: 2px;
+                    border-bottom: 3px solid rgb(49, 228, 168);
+                    
+
                     
                 }   
                 .sign-up-button {
@@ -56,19 +63,31 @@
                     background-color: white;
                     font-size: 16px;
                     padding: 10px;
+                    margin-right: 0px;
 
                 }
                 .sign-up-button:hover {
                     color: white;
-                    background-color: rgb(49, 228, 168);
-
-
-
+                    background-color: rgb(49, 228, 168);   
+                    border: 3px solid rgb(94, 199, 159);    
                 }
             }
-            // .logged-in-nav {
-                
-            // }
         }
     }
+}
+.logout-button {
+    padding: 0px 5px 0px 5px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    border: 3px solid rgb(49, 228, 168);
+    color: rgb(49, 228, 168);
+    background-color: white;
+    font-size: 16px;
+    padding: 10px;
+    margin-right: 14px;
+
+}
+.logout-button:hover {
+    color: white;
+    background-color: rgb(49, 228, 168);
 }

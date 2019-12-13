@@ -2,7 +2,12 @@ import React from 'react';
 // import { Link } from 'react-router-dom';
 
 
-const SplashNav = ({currentUser, logout, openModal}) => {
+const SplashNav = ({currentUser, logout, openModal, errors, clearSessionErrors}) => {
+    let errorsClass = 'noErrors';
+    if (errors.length > 0) {
+        errorsClass = 'presentErrors';
+        setTimeout(clearSessionErrors, 5000);
+    }
     const sessionLinks = () => (
         <nav className='splash-nav-container-buttons'>
             {/* <Link to='/login'>Log in</Link>
@@ -10,12 +15,13 @@ const SplashNav = ({currentUser, logout, openModal}) => {
             <button className='log-in-button'onClick={() => openModal('login')}>Log in</button>
             <br/>
             <button className='sign-up-button' onClick={() => openModal('signup')}>Sign up</button>
+            <span className={errorsClass}>{errors}</span>
         </nav>
     );
 
     const loggedInNav = () => (
         <nav className='logged-in-nav'>
-            <button onClick={logout}>Log Out</button>
+            <button className='logout-button' onClick={logout}>Log Out</button>
         </nav>
     );
     return currentUser ? loggedInNav() : sessionLinks();

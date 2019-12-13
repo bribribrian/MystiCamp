@@ -67,6 +67,7 @@ class SignUpForm extends React.Component {
                                 </div>
                                 <br/>
                                 <input className='submit-button-style' type="submit" value="Join Hipcamp" />
+                                {/* <button className='demo-user-login' onClick={() => {this.state = { username: 'Demo_User', password: 'password'}}}>Demo user!</button> */}
                                 <div className='privacy-policy-agreement'>By signing up, I agree to Hipcamp's</div>
                                  <div className='privacy-policy-agreement-2'>terms and privacy policy.</div>
                                 <div className='modal-footer'>

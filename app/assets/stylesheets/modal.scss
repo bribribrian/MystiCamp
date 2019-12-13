@@ -1,3 +1,20 @@
+
+.noErrors {
+    visibility: hidden;
+}
+
+.presentErrors{
+    background-color: red;
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    color: white;
+    z-index: 100;
+    padding: 10px 22px;
+    font-family: helvetica;
+    font-size: 12px;
+    font-weight: bold;
+}
 .modal-background {
     position: fixed;
     overflow: scroll;
@@ -123,6 +140,10 @@
                 // border: 3px solid rgb(49, 228, 168);
                 color: white;
                 background-color: rgb(94, 199, 159);
+            }
+            .demo-user-login {
+                background-color: rgb(65, 90, 148);
+                color: white;
             }
             .privacy-policy-agreement {
                 margin-top: 14px;
