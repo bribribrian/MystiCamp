@@ -21,7 +21,12 @@ const SplashNav = ({currentUser, logout, openModal, errors, clearSessionErrors})
 
     const loggedInNav = () => (
         <nav className='logged-in-nav'>
-            <button className='logout-button' onClick={logout}>Log Out</button>
+            <div className='dropdown'>
+            <button className='logout-button' onClick={logout}>Menu</button>
+                <div class='dropdown-menu'>
+                    <a>Log Out</a>
+                </div>
+            </div>
         </nav>
     );
     return currentUser ? loggedInNav() : sessionLinks();

@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { signup } from '../../actions/session_actions';
 import { Link } from 'react-router-dom';
-import { closeModal } from '../../actions/modal_actions';
+import { closeModal, openModal } from '../../actions/modal_actions';
 
 
 
@@ -17,6 +17,7 @@ class SignUpForm extends React.Component {
             password: "",
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
     update(field) {
         return (e) => this.setState({ [field]: e.currentTarget.value });
@@ -27,6 +28,12 @@ class SignUpForm extends React.Component {
         const user = Object.assign({}, this.state);
         this.props.action(user)
         .then(() => this.props.closeModal());
+    }
+
+    handleClick(e) {
+        e.preventDefault();
+        this.props.openLoginModal();
+
     }
 
     render() {
@@ -44,23 +51,28 @@ class SignUpForm extends React.Component {
                                     <input className='f-name-input' type="text" placeholder="First name..."
                                         value={this.state.f_name}
                                         onChange={this.update('f_name')}
+                                        required
                                     />
                                     <input className='l-name-input' type="text" placeholder="Last name..."
                                         value={this.state.l_name}
                                         onChange={this.update('l_name')}
+                                        required
                                     />
                                 </div>
-                                <input type="text" placeholder="Email address..."
+                                <input type="email" placeholder="Email address..."
                                     value={this.state.email}
                                     onChange={this.update('email')}
+                                    required
                                 />
                                 <input type="text" placeholder="Username..."
                                     value={this.state.username}
                                     onChange={this.update('username')}
+                                    required
                                 />
                                 <input type="password" placeholder="Password..."
                                     value={this.state.password}
                                     onChange={this.update('password')}
+                                    required
                                 />
                                 <div className="form-question-signup">
                                 <span className='placeholder-box'></span> I'm curious about sharing my land with campers
@@ -72,7 +84,7 @@ class SignUpForm extends React.Component {
                                  <div className='privacy-policy-agreement-2'>terms and privacy policy.</div>
                                 <div className='modal-footer'>
                                     <div className='footer-question'>Already a Hipcamper?
-                                        <Link className='footer-link' to='/login'> Log in!</Link>
+                                        <a className='footer-link' onClick={this.handleClick}>Log In!</a>
                                     </div>
                                 </div>
                             </form>
@@ -87,12 +99,12 @@ class SignUpForm extends React.Component {
 
 const mSTP = (errors) => ({
     errors: errors,
-    formType: "sign up"
 });
 
 const mDTP = dispatch => ({
     action: (user) => dispatch(signup(user)),
-    closeModal: () => dispatch(closeModal())
+    closeModal: () => dispatch(closeModal()),
+    openLoginModal: () =>dispatch(openModal('login'))
 });
 
 export default connect(mSTP, mDTP)(SignUpForm);

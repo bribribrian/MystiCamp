@@ -10,6 +10,8 @@
                 padding: 29px;
                 font-family: helvetica;
                 font-weight: bold;
+                color: black;
+                text-decoration: none;
         }
     }
     .right {
@@ -19,6 +21,7 @@
         justify-content: space-between;
         align-items: center;
         .menu {
+            visibility: hidden;
             padding-left: 40px;
             padding-right: 6px;
             width: 387px;
@@ -76,18 +79,53 @@
     }
 }
 .logout-button {
-    padding: 0px 5px 0px 5px;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    border: 3px solid rgb(49, 228, 168);
-    color: rgb(49, 228, 168);
-    background-color: white;
-    font-size: 16px;
-    padding: 10px;
-    margin-right: 14px;
-
+    // padding: 0px 5px 0px 5px;
+    // -webkit-transition-duration: 0.4s;
+    // transition-duration: 0.4s;
+    // border: 3px solid rgb(49, 228, 168);
+    // color: rgb(49, 228, 168);
+    // background-color: white;
+    // font-size: 16px;
+    // padding: 10px;
+    // margin-right: 14px;
+    border-radius: 50%;
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 9px;
+    margin-right: 40px;
+    cursor: pointer;
 }
 .logout-button:hover {
-    color: white;
-    background-color: rgb(49, 228, 168);
+    // color: white;
+    // background-color: rgb(49, 228, 168);
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown-menu a:hover {background-color: #f1f1f1}
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  .dropdown:hover .logout-button {
+  background-color: black;
 }

@@ -6,6 +6,7 @@ import SplashNavContainer from './splash_nav/splash_nav_container';
 import { Switch } from 'react-router-dom';
 import { AuthRoute } from '../util/route_util';
 import Modal from './modal/modal';
+import { openModal } from '../actions/modal_actions';
 
 const App = () => (
     <div>
@@ -13,7 +14,7 @@ const App = () => (
         <header>
             <nav className='nav'>
                 <div className='left'>
-                    <div className='logo'>MystiCamp</div>
+                    <a className='logo' href='/'>MystiCamp</a>
                 </div>
                 <div className='right'>
                     <ul className='menu'>
@@ -27,12 +28,26 @@ const App = () => (
                     </div>
                 </div>
             </nav>
-            <h1>Find yourself outside.</h1>
+            <div className='content'>
+                <h1>Find yourself outside.</h1>
+            </div>
         </header>
         <Switch>
             {/* <AuthRoute exact path='/login' component={LoginForm} />
             <AuthRoute exact path='/signup' component={SignUpForm} /> */}
         </Switch>
+        <footer>
+            <div className='footer'>
+            <div className='footer-space'></div>
+                <nav className='footer-nav'>
+                    <div className='footer-left'>adfadgfadfgadgfadfadgsdfgsdf</div>
+                    <div className='footer-center-left'>dafdafadfa</div>
+                    <div className='footer-center-right'>adfadfadf</div>
+                    <div className='footer-right'>asdfasdfasdfadfa</div>
+                </nav>
+            <div className='footer-space'></div>
+            </div>
+        </footer>
     </div>
 )
 

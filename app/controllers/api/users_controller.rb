@@ -9,6 +9,7 @@ class Api::UsersController < ApplicationController
         else  
             # render json: @user.errors.full_messages, status: 422
             render json: ["!  Required field blank."], status: 422
+           status: 422
         end
     end
 
