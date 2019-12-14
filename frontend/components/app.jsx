@@ -44,7 +44,6 @@ const App = () => (
                     <div className='footer-left'>
                         sfgsfgsfgsdgfgffs
                         <div>dafdafadfa</div>
-                        <br/>
                         <div>adfadfadf</div>
                     </div>
                     <div className='footer-right'>asdfasdfasdfadfa</div>
