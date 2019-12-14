@@ -20,7 +20,7 @@
         margin-right: 5px;
         justify-content: space-between;
         align-items: center;
-        .menu {
+        .menu {s
             visibility: hidden;
             padding-left: 40px;
             padding-right: 6px;
@@ -78,7 +78,7 @@
         }
     }
 }
-.logout-button {
+.logged-in-dropdown-button {
     // padding: 0px 5px 0px 5px;
     // -webkit-transition-duration: 0.4s;
     // transition-duration: 0.4s;
@@ -100,9 +100,12 @@
     margin-right: 40px;
     cursor: pointer;
 }
-.logout-button:hover {
+.logged-in-dropdown-button:hover {
     // color: white;
     // background-color: rgb(49, 228, 168);
+    // color: black;
+    // background-color: white;
+    // border: 1px solid black;
 }
 .dropdown {
     position: relative;
@@ -111,9 +114,7 @@
   .dropdown-menu {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
   .dropdown-menu a {
@@ -121,11 +122,54 @@
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    // display: absolute;
+    // left: 0;
   }
-  .dropdown-menu a:hover {background-color: #f1f1f1}
+  .dropdown-menu a:hover {
+      background-color: rgb(255, 255, 255)
+    }
   .dropdown:hover .dropdown-menu {
+    top: 60px;
+    width: 275px;
+    border: 1px solid lightgray;
+    border-right: none;
+    background-color: white;
     display: block;
+    right: -5px;
   }
-  .dropdown:hover .logout-button {
-  background-color: black;
+//   .dropdown:hover .hover-spacer {
+//     position: relative;
+//     right: -190px;
+//     top: 0px;
+//     background-color: purple;
+//     border-left: 10px solid transparent;
+//     border-right: 10px solid transparent;
+//     border-bottom: 10px solid saddlebrown;
+//   }
+  .dropdown:hover .dropdown-arrow {
+    position: relative;
+    right: -190px;
+    top: -20px;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid white;
+    background-color: transparent;
+  }
+  .dropdown:hover .dropdown-list-items {
+    text-align: center;
+    background-color: yellowgreen;
+    border: 1px solid yellow;
+  }
+  .logout-button {
+    font-family: helvetica;
+    font-size: 15px;
+  }
+  .logout-button:hover{
+      margin-left: 10px;
+  }
+  .dropdown:hover .logged-in-dropdown-button {
+//   background-color: black;
+//   color: white;
 }

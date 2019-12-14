@@ -22,9 +22,14 @@ const SplashNav = ({currentUser, logout, openModal, errors, clearSessionErrors})
     const loggedInNav = () => (
         <nav className='logged-in-nav'>
             <div className='dropdown'>
-            <button className='logout-button' onClick={logout}>Menu</button>
-                <div class='dropdown-menu'>
-                    <a>Log Out</a>
+            <button className='logged-in-dropdown-button'>Menu</button>
+                <div className='dropdown-menu'>
+                    <div className='hover-spacer'></div>
+                    <div className='dropdown-arrow'></div>
+                    <div className='dopdown-list-items'>
+                        <a className='logout-button' onClick={logout}>Log out</a>
+                        {/* <a>hello</a> */}
+                    </div>
                 </div>
             </div>
         </nav>
