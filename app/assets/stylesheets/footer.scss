@@ -10,12 +10,23 @@ footer{
     width: 1113px;
     border-top: 1px solid lightslategray;
     font-family: helvetica;
+    font-size: 14px;
     display: flex;
     justify-content: space-between;
-    color: greenyellow;
+    color: grey;
+    font-weight: lighter;
     .footer-space {
-        }
+    }
+    .footer-nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     .footer-left {
+        width: 500px;
+        display: flex;
+        justify-content: space-between;
         }
     .footer-center-left {
         }

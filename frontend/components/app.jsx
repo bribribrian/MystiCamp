@@ -38,11 +38,15 @@ const App = () => (
         </Switch>
         <footer>
             <div className='footer'>
+
             <div className='footer-space'></div>
                 <nav className='footer-nav'>
-                    <div className='footer-left'>adfadgfadfgadgfadfadgsdfgsdf</div>
-                    <div className='footer-center-left'>dafdafadfa</div>
-                    <div className='footer-center-right'>adfadfadf</div>
+                    <div className='footer-left'>
+                        sfgsfgsfgsdgfgffs
+                        <div>dafdafadfa</div>
+                        <br/>
+                        <div>adfadfadf</div>
+                    </div>
                     <div className='footer-right'>asdfasdfasdfadfa</div>
                 </nav>
             <div className='footer-space'></div>
