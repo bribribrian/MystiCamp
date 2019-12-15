@@ -2,11 +2,11 @@ import { connect } from 'react-redux';
 import { fetchListing }  from '../../actions/listing_actions';
 import ListingShow from './listing_show';
 
-const mSTP = (state) => {
-    const listingId = parseInt(match.params.listingId);
+const mSTP = (state, ownProps) => {
+    const listing = state.entities.listings[ownProps.match.params.listingId];
 
     return {
-        listingId
+        listing
     };
 }
 

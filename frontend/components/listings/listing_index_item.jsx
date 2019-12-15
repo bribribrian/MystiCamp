@@ -9,7 +9,7 @@ class ListingIndexItem extends React.Component {
 
     handleClick() {
         const listingId = this.props.listing.id;
-        this.props.history.push(`/lisings/${listingId}`);
+        this.props.history.push(`/listings/${listingId}`);
     }
 
     render() {

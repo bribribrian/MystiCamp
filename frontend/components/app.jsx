@@ -4,7 +4,7 @@ import SignUpForm from './session_forms/sign_up_form';
 import LoginForm from './session_forms/login_form';
 import SplashNavContainer from './splash_nav/splash_nav_container';
 import { Switch, Route} from 'react-router-dom';
-import { AuthRoute } from '../util/route_util';
+// import { AuthRoute } from '../util/route_util';
 import Modal from './modal/modal';
 import ListingIndex from './listings/listing_container';
 import ListingShowContainer from './listing_show/listing_show_container';

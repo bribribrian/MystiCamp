@@ -8,7 +8,7 @@ const ListingsReducer = (oldState = {}, action) => {
             return action.listings;
         case RECEIVE_LISTING:
             const newListing = { [action.listing.id]: action.listing };
-            return Object.assign({}, oldState, newListing)
+            return newListing;
         default:
             return oldState
     }

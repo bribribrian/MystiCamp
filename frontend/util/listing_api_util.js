@@ -5,9 +5,11 @@ export const fetchListings = () => (
     })
 );
 
-export const fetchListing = (lisitngId) => (
+export const fetchListing = (listingId) => {
+    return (
     $.ajax({
         url: `api/listings/${listingId}`,
         method: 'GET'
     })
-);
+    )
+};
