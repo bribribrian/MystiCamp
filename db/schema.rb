@@ -10,10 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_12_232522) do
+ActiveRecord::Schema.define(version: 2019_12_13_163522) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "amenities", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+  end
+
+  create_table "listing_joins", force: :cascade do |t|
+    t.integer "listing_id", null: false
+    t.integer "attributable_id", null: false
+    t.string "attributable_type", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["attributable_id", "attributable_type"], name: "index_listing_joins_on_attributable_id_and_attributable_type"
+  end
+
+  create_table "listings", force: :cascade do |t|
+    t.integer "host_id", null: false
+    t.string "title", null: false
+    t.text "description", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["host_id"], name: "index_listings_on_host_id"
+    t.index ["title"], name: "index_listings_on_title", unique: true
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username", null: false
@@ -26,7 +51,6 @@ ActiveRecord::Schema.define(version: 2019_12_12_232522) do
     t.string "session_token", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "listings", default: [], array: true
     t.integer "zip"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["session_token"], name: "index_users_on_session_token", unique: true
