@@ -4,6 +4,15 @@ class Api::ListingsController < ApplicationController
         @listing = listing.new(listing_params)
     end
 
+    def index
+        @listings = Listing.all
+        render :index
+    end
+
+    def show
+        @listing = Listing.find_by(id: params[:id])
+    end
+
 
     private
     def listing_params

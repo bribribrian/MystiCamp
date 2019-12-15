@@ -1,0 +1,1 @@
+json.extract! listing, :id, :title, :description

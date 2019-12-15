@@ -1,6 +1,7 @@
 User.destroy_all
 Listing.destroy_all
 Amenity.destroy_all
+ListingJoin.destroy_all
 
 
 demo = User.create!(username: 'Demo_User',f_name: 'Cool',l_name: 'Visitor',email: 'demouser@gmail.com', password: "password", zip: 10036)
@@ -11,7 +12,9 @@ dali = User.create!(username: 'DaliGala4Eva',f_name: 'Salvador',l_name: 'Dali',e
 cool_place = Listing.create!(host_id: bobby.id, title:'Cool Place', description:'This is a very cool place.' )
 strange_place = Listing.create!(host_id: dali.id, title:'Strange Place', description:'A strange place.')
 
-# wifi = Amenity.create!(type: 'Wifi')
+wifi = Amenity.create!(name: 'Wifi')
+showers = Amenity.create!(name: 'Showers')
 
-# listings_join_one = Listing_join.create!(listing_id: cool_place.id, attributable_id: wifi.id, attributable_type: 'amenity')
+listings_join_one = ListingJoin.create!(listing_id: cool_place.id, attributable_id: wifi.id, attributable_type: 'Amenity')
+listings_join_two = ListingJoin.create!(listing_id: strange_place.id, attributable_id: showers.id, attributable_type: 'Amenity')
 
