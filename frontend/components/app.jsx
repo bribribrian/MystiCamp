@@ -43,11 +43,16 @@ const App = () => (
             <div className='footer-space'></div>
                 <nav className='footer-nav'>
                     <div className='footer-left'>
-                        sfgsfgsfgsdgfgffs
-                        <div>dafdafadfa</div>
-                        <div>adfadfadf</div>
+                        <div className='footer-left-container'>
+                        <div>MystiCamp</div>
+                        <div className='footer-text-small'> by Brian Klein</div>
+                        </div>
+                        <div className='footer-text'>Terms of Service</div>
+                        <div className='footer-text'>Privacy Policy</div>
                     </div>
-                    <div className='footer-right'>asdfasdfasdfadfa</div>
+                    <div className='footer-right'>
+                        <div className='footer-text'>Github LinkedIn </div>
+                    </div>
                 </nav>
             <div className='footer-space'></div>
             </div>

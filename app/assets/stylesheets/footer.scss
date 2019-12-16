@@ -8,13 +8,21 @@ footer{
     height: 97px;
     margin: auto;
     width: 1113px;
-    border-top: 1px solid lightslategray;
+    border-top: 1px solid lightgray;
     font-family: helvetica;
     font-size: 14px;
+    font-weight: 600;
     display: flex;
     justify-content: space-between;
     color: grey;
-    font-weight: lighter;
+    .footer-text {
+        font-size: 12px;
+        font-weight: 300;
+    }
+    .footer-text-small {
+        font-size: 10px;
+        font-weight: 300;
+    }
     .footer-space {
     }
     .footer-nav {
@@ -28,6 +36,11 @@ footer{
         display: flex;
         justify-content: space-between;
         }
+    .footer-left-container {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
     .footer-center-left {
         }
     .footer-right {
