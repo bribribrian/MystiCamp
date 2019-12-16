@@ -15,7 +15,7 @@ class ListingIndexItem extends React.Component {
     render() {
         const { title, description } = this.props.listing;
         return (
-            <div onClick={this.handleClick}>
+            <div className='listing-index-item' onClick={this.handleClick}>
                 <span>Title:</span>
                 <br/>
                 <span>{title}</span>

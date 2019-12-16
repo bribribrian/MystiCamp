@@ -45,6 +45,7 @@
                 align-items: center;
                 justify-content: space-between;
                 .log-in-button {
+                    cursor: pointer;
                     padding: 0px 0px 0px 0px;
                     border: none;
                     font-size: 15px;
@@ -59,6 +60,7 @@
                     
                 }   
                 .sign-up-button {
+                    cursor: pointer;
                     -webkit-transition-duration: 0.4s;
                     transition-duration: 0.4s;
                     border: 3px solid rgb(49, 228, 168);
@@ -93,6 +95,7 @@
 }
 
 .dropdown {
+    cursor: pointer;
     position: relative;
     display: inline-block;
   }

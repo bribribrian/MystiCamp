@@ -29,8 +29,9 @@ const App = () => (
                     </div>
                 </div>
             </nav>
-            <div className='content'>
-                <h1>Find yourself outside.</h1>
+            <div className='top-content'>
+                <div className='sub-header-one'>Find yourself outside.</div>
+                <div className='sub-header-two'>Book unique camping experiences on over 300,000 campsites, cabins, RV parks, public parks and more.</div>
             </div>
         </header>
         <Switch>

@@ -1,7 +1,7 @@
 footer{
-    bottom: 0;
-    position: fixed;
-    width: 100%;
+    // bottom: 0;
+    // position: fixed;
+    // width: 100%;
 }
 .footer {
     background: white;
@@ -42,12 +42,16 @@ footer{
         justify-content: space-between;
     }
     .footer-icons {
+        
         width: 100%;
         font-size: 24px;
         font-weight: 400;
         display:flex;
         justify-content: space-between;
         align-items: center;
+    }
+    i {
+        cursor: pointer;
     }
     .footer-center-left {
         }

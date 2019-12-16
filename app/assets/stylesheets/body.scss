@@ -1,6 +1,28 @@
 body {
     background: lightgrey;
 }
-.content {
-    height: 100px;
+.top-content {
+    // margin-top: 27px;
+    width: 800px;
+    display:flex;
+    margin: 0 auto;
+    font-family: helvetica;
+    background: #ffffff;
+    flex-direction: column;
+    .sub-header-one {
+        margin-top: 68px;
+        width: 100%;
+        font-size: 42px;
+        font-weight: 600;
+    }
+    .sub-header-two {
+        margin-top: 27px;
+        width:454px;
+        font-size: 18px;
+        font-weight: 200;
+    }
+}
+
+.listing-index-item {
+    cursor: pointer;
 }
