@@ -5,6 +5,8 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyDDXP25MbIhjwsmIVxisFtnVg1R3FNj9Q8" %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <% if logged_in? %>

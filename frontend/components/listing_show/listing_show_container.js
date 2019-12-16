@@ -4,7 +4,6 @@ import ListingShow from './listing_show';
 
 const mSTP = (state, ownProps) => {
     const listing = state.entities.listings[ownProps.match.params.listingId];
-
     return {
         listing
     };

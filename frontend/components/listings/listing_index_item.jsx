@@ -20,10 +20,6 @@ class ListingIndexItem extends React.Component {
                 <br/>
                 <span>{title}</span>
                 <br/>
-                <span>Description</span>
-                <br/>
-                <span>{description}</span>
-                <br/>
             </div>
         );
     }

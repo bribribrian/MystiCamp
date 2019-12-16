@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
+import  ListingMap from '../listing_map/listing_map';
 
 
 class ListingShow extends React.Component {
     constructor(props) {
         super(props);
+        debugger;
     }
 
     componentDidMount() {
@@ -13,6 +15,7 @@ class ListingShow extends React.Component {
     }
 
     render() {
+        debugger
         // const { listing }  = this.props;
         if (!this.props.listing) return (
             <div>problem</div>
@@ -22,6 +25,8 @@ class ListingShow extends React.Component {
             <div>
                 <div>{this.props.listing.title}</div>
                 <div>{this.props.listing.description}</div>
+                <div> lat/lng: {this.props.listing.lat}/{this.props.listing.lng}</div>
+                <ListingMap listingId={this.props.listing.id} fetchListing={this.props.fetchListing}/>
             </div>
         )
     }
