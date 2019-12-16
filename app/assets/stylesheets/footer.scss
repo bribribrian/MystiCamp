@@ -41,9 +41,21 @@ footer{
         display: flex;
         justify-content: space-between;
     }
+    .footer-icons {
+        width: 100%;
+        font-size: 24px;
+        font-weight: 400;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     .footer-center-left {
         }
     .footer-right {
-        }
+        width: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
 }

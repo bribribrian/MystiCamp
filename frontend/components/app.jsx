@@ -51,7 +51,12 @@ const App = () => (
                         <div className='footer-text'>Privacy Policy</div>
                     </div>
                     <div className='footer-right'>
-                        <div className='footer-text'>Github LinkedIn </div>
+                        <div className="footer-icons">
+                        <i className="fab fa-github-square"></i>
+                        <i className="fab fa-linkedin"></i>
+                        <i className="fab fa-angellist"></i>
+                        </div>
+                        
                     </div>
                 </nav>
             <div className='footer-space'></div>
