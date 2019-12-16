@@ -29,19 +29,20 @@ const App = () => (
                     </div>
                 </div>
             </nav>
-            <div className='top-content'>
-                <div className='sub-header-one'>Find yourself outside.</div>
-                <div className='sub-header-two'>Book unique camping experiences on over 300,000 campsites, cabins, RV parks, public parks and more.</div>
-            </div>
         </header>
         <Switch>
             <Route exact path='/' component={ListingIndex} />
             <Route exact path='/listings/:listingId' component={ListingShowContainer} />
         </Switch>
         <footer>
+        <div className='pre-footer'>
+                    <div>
+                        <div>prefooter content</div>
+                        <div>prefooter content</div>
+                    </div>
+                    <div>prefooter content</div>
+                </div>
             <div className='footer'>
-
-            <div className='footer-space'></div>
                 <nav className='footer-nav'>
                     <div className='footer-left'>
                         <div className='footer-left-container'>
@@ -57,10 +58,8 @@ const App = () => (
                         <i className="fab fa-linkedin"></i>
                         <i className="fab fa-angellist"></i>
                         </div>
-                        
                     </div>
                 </nav>
-            <div className='footer-space'></div>
             </div>
         </footer>
     </div>

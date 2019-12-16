@@ -20,7 +20,7 @@ class ListingShow extends React.Component {
         );
 
         return (
-            <div>
+            <div className='listing-show-main'>
                 <div>{this.props.listing.title}</div>
                 <div>{this.props.listing.description}</div>
                 <div> lat/lng: {this.props.listing.lat}/{this.props.listing.lng}</div>

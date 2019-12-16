@@ -22,6 +22,10 @@ class ListingIndex extends React.Component {
         return (
         <div>
             <div className='index-container'>
+                <div className='top-content'>
+                    <div className='sub-header-one'>Find yourself outside.</div>
+                    <div className='sub-header-two'>Book unique camping experiences on over 300,000 campsites, cabins, RV parks, public parks and more.</div>
+                </div>
                 <div className='index-title'>Discover camping...</div>
                 <div className='index-items-container'>
                     {this.props.listings.map(listing => (
@@ -31,7 +35,6 @@ class ListingIndex extends React.Component {
                         />
                     ))}
                 </div>
-                <div className='filler-content'>filler content</div>
             </div>
         </div>
         )

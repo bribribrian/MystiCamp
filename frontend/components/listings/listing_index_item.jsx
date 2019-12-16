@@ -16,10 +16,11 @@ class ListingIndexItem extends React.Component {
         const { title, description } = this.props.listing;
         return (
             <div className='listing-index-item' onClick={this.handleClick}>
-                <span>Title:</span>
-                <br/>
-                <span>{title}</span>
-                <br/>
+                <div className='thumbnail'/>
+                <div className='thumbnail-text'>
+                    <span className='thumbnail-title'>{title}</span>
+                    <span className='thumbnail-subtitle'>Subtitle</span>
+                </div>
             </div>
         );
     }
