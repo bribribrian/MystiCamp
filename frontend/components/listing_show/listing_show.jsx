@@ -7,7 +7,6 @@ import  ListingMap from '../listing_map/listing_map';
 class ListingShow extends React.Component {
     constructor(props) {
         super(props);
-        debugger;
     }
 
     componentDidMount() {
@@ -15,7 +14,6 @@ class ListingShow extends React.Component {
     }
 
     render() {
-        debugger
         // const { listing }  = this.props;
         if (!this.props.listing) return (
             <div>problem</div>
