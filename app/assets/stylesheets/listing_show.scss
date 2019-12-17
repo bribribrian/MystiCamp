@@ -1,4 +1,5 @@
 .listing-show-main {
+    font-family: helvetica;
     margin-top: 72px;
     background-color: white;
 }
@@ -10,8 +11,156 @@
 .show-properties {
     background-color: white;
     margin: 0 auto;
-    width: 1063px;
+    width: 85%;
+    max-width: 1281px;
+    // max-width: 701px;
+    // min-width: 271px;
+    display: flex;
+    justify-content: center;
 }
 .show-properties-right{
-    width: 75%;
+    // max-width: 701px;
+    // width: 55%;
+    width: 55%;
+}
+.show-title {
+    margin-top: 8px;
+    font-family: helvetica;
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 17px;
+}
+.description-container {
+    border-top: 1px solid lightgray;
+    padding-top: 27px;
+    display: flex;
+    justify-content: space-between;
+}
+.description-host {
+    width: 20%;
+    display: flex;
+}
+.show-description {
+    display: flex;
+    width: 70%;
+    font-family: helvetica;
+    font-size: 15px;
+    font-weight: lighter;
+    
+}
+.attributes-container {
+    padding-top: 27px;
+    margin-top: 27px;
+    border-top: 1px solid lightgray;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.lodging {
+    width: 32%;
+    max-width: 219px;
+    border: 1px solid lightgray;
+    box-shadow: 0px 3px 5px 1px rgba(230, 227, 227, 0.5);
+    height: 342px;
+    font-size: 22px;
+    margin-bottom: 27px;
+    margin-right: 20px;
+}
+.essentials {
+    width: 32%;
+    max-width: 219px;
+    border: 1px solid lightgray;
+    box-shadow: 0px 3px 5px 1px rgba(230, 227, 227, 0.5);
+    height: 342px;
+    font-size: 22px;
+    margin-bottom: 27px;
+    margin-right: 20px;
+
+}
+.amenities {
+    width: 32%;
+    max-width: 219px;
+    border: 1px solid lightgray;
+    box-shadow: 0px 3px 5px 1px rgba(230, 227, 227, 0.5);
+    height: 342px;
+    font-size: 22px;
+    margin-bottom: 27px;
+
+}
+
+.details-container {
+    padding-top: 27px;
+    height: 100px;
+    border-top: 1px solid lightgray;
+    display: flex;
+    justify-content: space-between;
+}
+
+.activities-container {
+    padding-top: 27px;
+    margin-top: 27px;
+    height: 100px;
+    border-top: 1px solid lightgray;
+    display: flex;
+    justify-content: space-between;
+}
+
+.terrain-container {
+    padding-top: 27px;
+    margin-top: 27px;
+    height: 100px;
+    border-top: 1px solid lightgray;
+    display: flex;
+    justify-content: space-between;
+}
+
+.vibe-container {
+    padding-top: 27px;
+    margin-top: 27px;
+    margin-bottom: 27px;
+    height: 100px;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    justify-content: space-between;
+}
+
+.aside-container {
+    position: sticky;
+    width: 320px;
+    height: 220px;
+    top: 224px;
+    right: 200px;
+    z-index: 20;
+    margin-left: 40px;
+
+}
+.cost-container { 
+    font-size: 32px;
+    color: black;
+    position: relative;
+    border: 1px solid lightgray;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 3px 5px 1px rgba(230, 227, 227, 0.5);
+    top: -48px;
+    width: 320px;
+    height: 220px;
+    // height: 33%;
+    // width: 100%;
+    border-bottom: 1px solid lightgray;
+}
+.cost {
+    padding-left: 10px;
+    padding-top: 16px;
+    font-family: helvetica;
+    font-size: 24px;
+    font-weight: 600;
+}
+.per-night {
+    padding-left: 10px;
+    padding-top: 4px;
+    color: grey;
+    font-family: helvetica;
+    font-size: 15px;
+    font-weight: lighter;
 }

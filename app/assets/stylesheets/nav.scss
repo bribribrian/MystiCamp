@@ -101,6 +101,7 @@
     cursor: pointer;
     position: relative;
     display: inline-block;
+    
   }
   .dropdown-menu {
     display: none;
@@ -134,9 +135,10 @@
     position: absolute;
     bottom: 100%;
     right: 45px;
-    border-width: 0 20px 20px 20px;
+    border-width: 0 15px 15px 15px;
     border-style: solid;
     border-color: white transparent;
+    padding-top: 20px;
   }
   .dropdown .dropdown-list-items:before {
     content: '';
@@ -145,26 +147,16 @@
     position: absolute;
     bottom: 100%;
     right: 43px;
-    border-width: 0 22px 22px 22px;
+    border-width: 0 17px 17px 17px;
     border-style: solid;
     border-color: lightgrey transparent;
   }
-  // .dropdown .dropdown-list-items:before {
-  //   content: '';
-  //   width: 0;
-  //   height: 0;
-  //   position: absolute;
-  //   bottom: 99%;
-  //   right: 43px;
-  //   border-width: 0 22px 22px 22px;
-  //   border-style: solid;
-  //   border-color: transparent;
-  // }
  
   .logout-button {
     font-family: helvetica;
     font-size: 15px;
   }
   .logout-button:hover{
+      transition: margin-left .25s;
       margin-left: 10px;
   }

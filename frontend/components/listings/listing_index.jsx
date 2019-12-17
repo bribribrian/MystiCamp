@@ -20,7 +20,7 @@ class ListingIndex extends React.Component {
         }
         
         return (
-        <div>
+        <div className='index-main'>
             <div className='index-container'>
                 <div className='top-content'>
                     <div className='sub-header-one'>Find yourself outside.</div>

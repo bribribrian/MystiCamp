@@ -10,9 +10,7 @@ import MarkerManager from '../../util/marker_manager';
 
 
 class ListingMap extends React.Component {
-
     componentDidMount() {
-        
         // const map = this.refs.map;
         // this.map = new google.maps.Map(map, mapOptions);
         // this.MarkerManager = new MarkerManager(this.map, this.handleMarkerClick.bind(this));
@@ -25,13 +23,15 @@ class ListingMap extends React.Component {
         // }
         // this.map = new google.maps.Map(this.mapNode, mapOptions);
         const mapOptions = {
-            
+
             center: {
                 lat: this.props.listing.lat,
                 lng: this.props.listing.lng
             },
-            zoom: 13  
+            zoom: 13,  
+            mapTypeId:  'terrain'
         }
+
         let center = {
             lat: this.props.listing.lat,
             lng: this.props.listing.lng
@@ -40,6 +40,7 @@ class ListingMap extends React.Component {
         this.map = new google.maps.Map(this.mapNode, mapOptions);
 
         const circle = new google.maps.Circle({
+
             strokeColor: '51D9AC',
             strokeOpacity: 0.8,
             strokeWeight: 1,

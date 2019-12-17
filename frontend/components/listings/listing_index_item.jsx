@@ -13,10 +13,10 @@ class ListingIndexItem extends React.Component {
     }
 
     render() {
-        const { title, description } = this.props.listing;
+        const { title, description, thumbnail } = this.props.listing;
         return (
             <div className='listing-index-item' onClick={this.handleClick}>
-                <img className='thumbnail' src={daylight}/>
+                <img className='thumbnail' src={window[thumbnail]}/>
                 <div className='thumbnail-text'>
                     <span className='thumbnail-title'>{title}</span>
                     <span className='thumbnail-subtitle'>Subtitle</span>

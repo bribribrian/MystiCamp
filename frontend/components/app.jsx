@@ -10,7 +10,7 @@ import ListingIndex from './listings/listing_container';
 import ListingShowContainer from './listing_show/listing_show_container';
 
 const App = () => (
-    <div>
+    <div className='app'>
         <Modal />
         <header>
             <nav className='nav'>
