@@ -16,7 +16,7 @@ class ListingIndexItem extends React.Component {
         const { title, description } = this.props.listing;
         return (
             <div className='listing-index-item' onClick={this.handleClick}>
-                <div className='thumbnail'/>
+                <img className='thumbnail' src={daylight}/>
                 <div className='thumbnail-text'>
                     <span className='thumbnail-title'>{title}</span>
                     <span className='thumbnail-subtitle'>Subtitle</span>

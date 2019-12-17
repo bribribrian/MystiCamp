@@ -21,9 +21,14 @@ class ListingShow extends React.Component {
 
         return (
             <div className='listing-show-main'>
-                <div>{this.props.listing.title}</div>
-                <div>{this.props.listing.description}</div>
-                <div> lat/lng: {this.props.listing.lat}/{this.props.listing.lng}</div>
+                <img className='show-image' src={night}/>
+                <div className='show-properties'>
+                    <div className='show-properties-right'>
+                        <div>{this.props.listing.title}</div>
+                        <div>{this.props.listing.description}</div>
+                        <div> lat/lng: {this.props.listing.lat}/{this.props.listing.lng}</div>
+                    </div>
+                </div>
                 <ListingMap listingId={this.props.listing.id} fetchListing={this.props.fetchListing}/>
             </div>
         )
