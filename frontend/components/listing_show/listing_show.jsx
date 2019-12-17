@@ -14,7 +14,6 @@ class ListingShow extends React.Component {
     }
 
     render() {
-        // const { listing }  = this.props;
         if (!this.props.listing) return (
             <div>problem</div>
         );
@@ -29,24 +28,10 @@ class ListingShow extends React.Component {
                         <div> lat/lng: {this.props.listing.lat}/{this.props.listing.lng}</div>
                     </div>
                 </div>
-                <ListingMap listingId={this.props.listing.id} fetchListing={this.props.fetchListing}/>
+                <ListingMap listingId={this.props.listing.id} listing={this.props.listing} fetchListing={this.props.fetchListing}/>
             </div>
         )
     }
 }
-
-
-// const ListingShow = ({ listingId, fetchListing }) => {
-//     const listings = {
-//         [lisingId]: listing
-//     };
-
-//     return(
-//         <div>
-//            HELLO
-//         </div>
-//     );
-
-// };
 
 export default withRouter(ListingShow);
