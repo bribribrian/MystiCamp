@@ -6,4 +6,5 @@ class Listing < ApplicationRecord
     has_many :amenities, through: :listing_joins, source: :attributable, source_type: 'Amenity'
     has_many :essentials, through: :listing_joins, source: :attributable, source_type: 'Essential'
     has_many :activities, through: :listing_joins, source: :attributable, source_type: 'Activity'
+    has_many :terrains, through: :listing_joins, source: :attributable, source_type: 'Terrain'
 end

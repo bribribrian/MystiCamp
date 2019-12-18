@@ -6,7 +6,7 @@
 .show-image {
     width: 100%;
     height: 480px;
-    border: 10px solid white;
+    // border: 10px solid white;
 }
 .show-properties {
     background-color: white;
@@ -22,6 +22,7 @@
     // max-width: 701px;
     // width: 55%;
     width: 55%;
+    margin-top: 10px;
 }
 .show-title {
     margin-top: 8px;
@@ -58,33 +59,66 @@
 }
 .lodging {
     width: 32%;
-    max-width: 219px;
+    min-width: 180px;
+    max-width: 180px;
     border: 1px solid lightgray;
     box-shadow: 0px 3px 5px 1px rgba(230, 227, 227, 0.5);
     height: 342px;
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 27px;
-    margin-right: 20px;
+    margin-right: 18px;
+    padding: 20px;
 }
-.essentials {
-    width: 32%;
-    max-width: 219px;
-    border: 1px solid lightgray;
-    box-shadow: 0px 3px 5px 1px rgba(230, 227, 227, 0.5);
-    height: 342px;
-    font-size: 22px;
-    margin-bottom: 27px;
-    margin-right: 20px;
+.lodging-title {
+    margin-bottom: 20px;
+}
+.lodging li {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: lighter;
 
 }
-.amenities {
+
+.essentials {
     width: 32%;
-    max-width: 219px;
+    min-width: 180px;
+    max-width: 180px;
     border: 1px solid lightgray;
     box-shadow: 0px 3px 5px 1px rgba(230, 227, 227, 0.5);
     height: 342px;
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 27px;
+    margin-right: 18px;
+    padding: 20px;
+}
+.essentials-title {
+    margin-bottom: 20px;
+}
+.essentials li {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: lighter;
+
+}
+
+.amenities {
+    width: 32%;
+    min-width: 180px;
+    max-width: 180px;
+    border: 1px solid lightgray;
+    box-shadow: 0px 3px 5px 1px rgba(230, 227, 227, 0.5);
+    height: 342px;
+    font-size: 20px;
+    margin-bottom: 27px;
+    padding: 20px;
+}
+.amenities-title {
+    margin-bottom: 20px;
+}
+.amenities li {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: lighter;
 
 }
 
@@ -99,20 +133,83 @@
 .activities-container {
     padding-top: 27px;
     margin-top: 27px;
-    height: 100px;
     border-top: 1px solid lightgray;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+}
+.activities-title {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+.activities-subtitle {
+    font-size: 16px;
+    color: gray;
+    font-weight: lighter;
+}
+.activities-ul-container {
+    display: flex;
+    flex-direction: column;
+}
+.activities-container li {
+    margin-top: 30px;
+    width: 110px;
+    text-align: center;
+    margin-right: 15px;
+    font-size: 14px;
+}
+.activities-list {
+    display: flex;
+    flex-direction: row;
+}
+.activities-container li i {
+    border: 1px solid lightgray;
+    font-size: 30px;
+    margin: 0 auto;
+    padding: 33px;
+    margin-bottom: 8px;
 }
 
-.terrain-container {
+.terrains-container {
     padding-top: 27px;
     margin-top: 27px;
-    height: 100px;
     border-top: 1px solid lightgray;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
+.terrains-title {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+.terrains-subtitle {
+    font-size: 16px;
+    color: gray;
+    font-weight: lighter;
+}
+.terrains-ul-container {
+    display: flex;
+    flex-direction: column;
+}
+.terrains-container li {
+    margin-top: 30px;
+    width: 110px;
+    text-align: center;
+    margin-right: 15px;
+    font-size: 14px;
+}
+.terrains-list {
+    display: flex;
+    flex-direction: row;
+}
+.terrains-container li i {
+    border: 1px solid lightgray;
+    font-size: 30px;
+    margin: 0 auto;
+    padding: 33px;
+    margin-bottom: 8px;
+}
+
 
 .vibe-container {
     padding-top: 27px;
@@ -163,4 +260,12 @@
     font-family: helvetica;
     font-size: 15px;
     font-weight: lighter;
+}
+
+.map-container {
+    width: 100%;
+    height: 389px;
+    float: left;
+    position: relative;
+    margin-top: 30px;
 }
