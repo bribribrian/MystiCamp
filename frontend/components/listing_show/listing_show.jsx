@@ -17,6 +17,18 @@ class ListingShow extends React.Component {
         if (!this.props.listing) return (
             <div>problem</div>
         );
+        let amenitiesList;
+        if (this.props.listing.amenities) {
+            amenitiesList = this.props.listing.amenities.map((amenity) => <li key={amenity.id}>{amenity.name}</li>)
+        }
+        let essentialsList;
+        if (this.props.listing.essentials) {
+            essentialsList = this.props.listing.essentials.map((essential) => <li key={essential.id}>{essential.name}</li>)
+        }
+        let activitiesList;
+        if (this.props.listing.activities) {
+            activitiesList = this.props.listing.activities.map((activity) => <li key={activity.id}>{activity.name}</li>)
+        }
 
         return (
             <div className='listing-show-main'>
@@ -32,14 +44,27 @@ class ListingShow extends React.Component {
                         </div>
                         <div className='attributes-container'>
                             <div className='lodging'>Lodging provided</div>
-                            <div className='essentials'>Essentials</div>
-                            <div className='amenities'>Amenities</div>
+                            <div className='essentials'>
+                            <div className='essentials-title'>Essentials</div>
+                                <ul className='essentials-list'>
+                                    {essentialsList}
+                                </ul>
+                            </div>
+                            <div className='amenities'>
+                                <div className='ameities-title'>Amenities</div>
+                                <ul className='amenities-list'>
+                                    {amenitiesList}
+                                </ul>
+                            </div>
                         </div>
                         <div className='details-container'>
                             Detials
                         </div>
                         <div className='activities-container'>
-                            Activities
+                            <div className='activities-title'>Activities</div>
+                             <ul className='activities-list'>
+                                {activitiesList}
+                            </ul>
                         </div>
                         <div className='terrain-container'>
                             Terrain
