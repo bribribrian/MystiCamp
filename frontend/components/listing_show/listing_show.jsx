@@ -98,7 +98,13 @@ class ListingShow extends React.Component {
             logding_icon = <i className="fas fa-certificate"></i>
         };
 
-     
+        const hostName = (listing) => {
+            if (listing.host) {
+            return (listing.host.f_name).concat(' ').concat(listing.host.l_name.charAt(0).concat('.'))
+            } else {
+                return null;
+            }
+        };
        
 
         // <i class="fas fa-map-marker-alt"></i>
@@ -114,7 +120,13 @@ class ListingShow extends React.Component {
                             <div className='show-title'>{this.props.listing.title}</div>
                         </div>
                         <div className='description-container'>
-                            <div className='description-host'>Hosted by</div>
+                            <div className='host-container'>
+                                <i className="far fa-user"></i>
+                                <div className='host-text'>
+                                    <div className='description-host'>Hosted by</div>
+                                    <div className='host-f_name'>{hostName(this.props.listing)}</div>
+                                </div>
+                            </div>
                             <div className='show-description'>{this.props.listing.description}</div>
                         </div>
                         <div className='attributes-container'>

@@ -4,3 +4,5 @@ json.amenities @listing.amenities
 json.essentials @listing.essentials
 json.activities @listing.activities
 json.terrains @listing.terrains
+
+json.host @listing.host
