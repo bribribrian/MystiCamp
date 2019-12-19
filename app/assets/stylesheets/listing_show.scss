@@ -17,22 +17,25 @@
     // min-width: 271px;
     display: flex;
     justify-content: center;
+    color: #333333;
 }
 .show-properties-right{
     // max-width: 701px;
     // width: 55%;
-    width: 55%;
+    width: 60%;
+    max-width: 702px;
     margin-top: 10px;
 }
 .show-title {
     margin-top: 8px;
     font-family: helvetica;
+    color: #333333;
     font-size: 35px;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 17px;
 }
 .description-container {
-    border-top: 1px solid lightgray;
+    border-top: 1px solid #ebebeb;
     padding-top: 27px;
     display: flex;
     justify-content: space-between;
@@ -59,14 +62,17 @@
     display: flex;
     width: 70%;
     font-family: helvetica;
-    font-size: 15px;
-    font-weight: lighter;
+    font-size: 16px;
+    color: #333333;
+    line-height: 1.5;
+    font-weight: 400;
+    margin-right: 25px;
     
 }
 .attributes-container {
     padding-top: 27px;
     margin-top: 27px;
-    border-top: 1px solid lightgray;
+    border-top: 1px solid #ebebeb;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
@@ -75,7 +81,8 @@
     width: 32%;
     min-width: 180px;
     max-width: 180px;
-    border: 1px solid lightgray;
+    border: 1px solid #ebebeb;
+    color: #333333;
     box-shadow: 0px 3px 5px 1px rgba(230, 227, 227, 0.5);
     height: 342px;
     font-size: 20px;
@@ -85,19 +92,32 @@
 }
 .lodging-title {
     margin-bottom: 20px;
+    font-weight: 500;
+    color: #333333;
+
 }
 .lodging li {
     margin-top: 10px;
     font-size: 16px;
     font-weight: lighter;
-
+    color: #333333;
+    display: flex;
+}
+.lodging li i {
+    text-align: center;
+    width: 25px;
+}
+.max-guests-number {
+    font-size: 16px;
+    word-spacing: -3px;
 }
 
 .essentials {
     width: 32%;
     min-width: 180px;
     max-width: 180px;
-    border: 1px solid lightgray;
+    border: 1px solid #ebebeb;
+    color: #333333;
     box-shadow: 0px 3px 5px 1px rgba(230, 227, 227, 0.5);
     height: 342px;
     font-size: 20px;
@@ -112,6 +132,7 @@
     margin-top: 10px;
     font-size: 16px;
     font-weight: lighter;
+    color: #333333;
 
 }
 
@@ -119,7 +140,8 @@
     width: 32%;
     min-width: 180px;
     max-width: 180px;
-    border: 1px solid lightgray;
+    border: 1px solid #ebebeb;
+    color: #333333;
     box-shadow: 0px 3px 5px 1px rgba(230, 227, 227, 0.5);
     height: 342px;
     font-size: 20px;
@@ -133,21 +155,42 @@
     margin-top: 10px;
     font-size: 16px;
     font-weight: lighter;
+    color: #333333;
 
 }
 
 .details-container {
     padding-top: 27px;
-    height: 100px;
-    border-top: 1px solid lightgray;
+    border-top: 1px solid #ebebeb;
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
+}
+.details-title {
+    margin-right: 60px;
+}
+
+.details-column-one div {
+    line-height: 30px;
+    font-weight: lighter;
+    margin-right: 60px;
+    font-size: 14px;
+}
+.details-column-two div {
+    line-height: 30px;
+    font-weight: lighter;
+    margin-right: 60px;
+    font-size: 14px;
+}
+.detail-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 5px;
 }
 
 .activities-container {
     padding-top: 27px;
     margin-top: 27px;
-    border-top: 1px solid lightgray;
+    border-top: 1px solid #ebebeb;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -158,7 +201,7 @@
 }
 .activities-subtitle {
     font-size: 16px;
-    color: gray;
+    color: #757575;
     font-weight: lighter;
 }
 .activities-ul-container {
@@ -177,7 +220,7 @@
     flex-direction: row;
 }
 .activities-container li i {
-    border: 1px solid lightgray;
+    border: 1px solid #ebebeb;
     font-size: 30px;
     margin: 0 auto;
     padding: 33px;
@@ -188,10 +231,13 @@
 .terrains-container {
     padding-top: 27px;
     margin-top: 27px;
-    border-top: 1px solid lightgray;
+    border-top: 1px solid #ebebeb;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    border-bottom: 1px solid #ebebeb;
+    padding-bottom: 27px;
+
+
 }
 .terrains-title {
     font-size: 16px;
@@ -199,7 +245,7 @@
 }
 .terrains-subtitle {
     font-size: 16px;
-    color: gray;
+    color: #757575;
     font-weight: lighter;
 }
 .terrains-ul-container {
@@ -218,7 +264,7 @@
     flex-direction: row;
 }
 .terrains-container li i {
-    border: 1px solid lightgray;
+    border: 1px solid #ebebeb;
     font-size: 30px;
     margin: 0 auto;
     padding: 33px;
@@ -228,22 +274,50 @@
 
 
 .vibe-container {
-    padding-top: 27px;
+    
     margin-top: 27px;
     margin-bottom: 27px;
-    height: 100px;
-    border-top: 1px solid lightgray;
-    border-bottom: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+}
+.vibe-title {
+    font-weight: bold;
+    margin-bottom: 27px;
+}
+.vibes-container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+}
+.vibes-container > div {
+    height: 220px;
+    width: 220px;
+    border: 1px solid #ebebeb;
+    box-shadow: 0px 3px 5px 1px rgba(230, 227, 227, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 27px;
+}
+.vibes-title {
+    font-size: 38px;
+    font-weight: bold;
+
+}
+.vibes-body {
+    margin-top: 8px;
+    font-weight: lighter;
+    font-size: 14px;
 }
 
 .aside-container {
     position: sticky;
     width: 320px;
     height: 220px;
-    top: 224px;
-    right: 200px;
+    top: 118px;
+    // right: 200px;
+    right: 7%;
     z-index: 20;
     margin-left: 40px;
 
@@ -252,7 +326,7 @@
     font-size: 32px;
     color: black;
     position: relative;
-    border: 1px solid lightgray;
+    border: 1px solid #ebebeb;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 3px 5px 1px rgba(230, 227, 227, 0.5);
     top: -48px;
@@ -260,7 +334,7 @@
     height: 220px;
     // height: 33%;
     // width: 100%;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid #ebebeb;
 }
 .cost {
     padding-left: 10px;
@@ -268,11 +342,12 @@
     font-family: helvetica;
     font-size: 24px;
     font-weight: 600;
+    color: #333333;
 }
 .per-night {
     padding-left: 10px;
     padding-top: 4px;
-    color: grey;
+    color: #757575;
     font-family: helvetica;
     font-size: 15px;
     font-weight: lighter;
@@ -283,5 +358,5 @@
     height: 389px;
     float: left;
     position: relative;
-    margin-top: 30px;
+    // margin-top: 30px;
 }

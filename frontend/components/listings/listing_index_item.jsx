@@ -19,7 +19,7 @@ class ListingIndexItem extends React.Component {
                 <img className='thumbnail' src={window[thumbnail]}/>
                 <div className='thumbnail-text'>
                     <span className='thumbnail-title'>{title}</span>
-                    <span className='thumbnail-subtitle'>Subtitle</span>
+                    <span className='thumbnail-subtitle'>Check out {this.props.listing.title}!</span>
                 </div>
             </div>
         );

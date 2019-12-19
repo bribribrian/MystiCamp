@@ -124,7 +124,7 @@ class ListingShow extends React.Component {
                                 <i className="far fa-user"></i>
                                 <div className='host-text'>
                                     <div className='description-host'>Hosted by</div>
-                                    <div className='host-f_name'>{hostName(this.props.listing)}</div>
+                                    <div className='host-name'>{hostName(this.props.listing)}</div>
                                 </div>
                             </div>
                             <div className='show-description'>{this.props.listing.description}</div>
@@ -133,9 +133,18 @@ class ListingShow extends React.Component {
                             <div className='lodging'>
                             <div className='lodging-title'>Lodging Provided</div>
                                 <ul className='lodging-list'>
-                                    <li> {logding_icon} {this.props.listing.lodging} </li>
-                                    <li> <i className="fas fa-map-marker-alt"></i>    {this.props.listing.num_sites} sites</li>
-                                    <li> <i className="fas fa-user-friends"></i> Up to {this.props.listing.max_guests} guests per site.</li>
+                                    <li> 
+                                        <div className='lodging-icon'>{logding_icon}</div>
+                                        <div className='lodging-number'>{this.props.listing.lodging}</div>
+                                    </li>
+                                    <li> 
+                                        <div className='num-sites-icon'><i className="fas fa-map-marker-alt"></i></div>  
+                                        <div className='num-sites-number'>{this.props.listing.num_sites} sites</div>
+                                    </li>
+                                    <li>
+                                        <div className='max-guests-icon'><i className="fas fa-user-friends"></i></div>
+                                        <div className='max-guests-number'>Up to {this.props.listing.max_guests} guests per site.</div>
+                                    </li>
                                 </ul>
                             </div>
                             <div className='essentials'>
@@ -151,9 +160,21 @@ class ListingShow extends React.Component {
                                 </ul>
                             </div>
                         </div>
-                        {/* <div className='details-container'>
-                            Detials
-                        </div> */}
+                        <div className='details-container'>
+                            <div className='details-title'>Detials</div>
+                            <div className='details-column-one'>
+                                <div className='details-checkin'><span className='detail-title'>Check in:</span>After 4PM</div>
+                                <div className='details-checkout'><span className='detail-title'>Check out:</span>Before 11AM</div>
+                                <div className='details-cancellation'><span className='detail-title'>Cancellation policy:</span>Moderate</div>
+                                <div className='details-response'><span className='detail-title'>Response time:</span>Within 12 hours</div>
+                            </div>
+                            <div className='details-column-two'>
+                                <div className='details-arrival'><span className='detail-title'>On arrival:</span>Go stright to camp</div>
+                                <div className='details-minimum'><span className='detail-title'>Minimum nights:</span>1 night</div>
+                                <div className='details-accepts'><span className='detail-title'>Accepts bookings:</span>12 months out</div>
+                                <div className='details-weeknight'><span className='detail-title'>Weeknight discount:</span>10% off</div>
+                            </div>
+                        </div>
                         <div className='activities-container'>
                             <div className='activities-titles'>
                                 <div className='activities-title'>Activities</div>
@@ -172,9 +193,23 @@ class ListingShow extends React.Component {
                                     {terrainsList}
                                 </ul>
                         </div>
-                        {/* <div className='vibe-container'>
-                            Vibe
-                        </div> */}
+                        <div className='vibe-container'>
+                            <div className='vibe-title'>The vibe at {this.props.listing.title}</div>
+                            <div className='vibes-container'>
+                                <div className='elevation-container'>
+                                    <div className='vibes-title'>26ft</div>
+                                    <div className='vibes-body'>Listing's elevation</div>
+                                </div>
+                                <div className='temperature-container'>
+                                    <div className='vibes-title'>20°F</div>
+                                    <div className='vibes-body'>Clear today</div>
+                                </div>
+                                <div className='distance-container'>
+                                    <div className='vibes-title'>1.5</div>
+                                    <div className='vibes-body'>Away, as the crow flies</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div className='aside-container'>
                         <div className='cost-container'>

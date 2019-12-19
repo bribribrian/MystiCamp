@@ -11,22 +11,74 @@ jack = User.create!(username: 'HitDaRoadAgian55',f_name: 'Jack',l_name: 'Kerouac
 bobby = User.create!(username: 'ThinManDumpTruck60',f_name: 'Robert',l_name: 'Zimmerman',email: 'StillRollinOn60@gmail.com', lat: 40.7265,lng: -73.9815, password: "password", zip: 10036)
 dali = User.create!(username: 'DaliGala4Eva',f_name: 'Salvador',l_name: 'Dali',email: 'MoonElephantEyeball@gmail.com', lat: 40.7484,lng: -73.9857, password: "password", zip: 10036)
 
-cool_place = Listing.create!(host_id: bobby.id, title:'Cool Place', description:'This is a very cool place.', lat: 40.7061, lng: -73.9969, thumbnail: 'night',
+cool_place = Listing.create!(host_id: bobby.id, title:'Cool Place',
+                            description:'This is a very cool place. Lorem ipsum dolor sit amet,
+                            duo duis quaeque adipiscing ad, diam iudico latine at mel. Nec no sint quaerendum,
+                            oporteat imperdiet constituam est et, vero oblique elaboraret ad mel.
+                            Vim eu recusabo splendide. Duo nostrud copiosae et,
+                            prima philosophia ad est. Sit ad ubique democritum,
+                            usu zril homero consequat ei, quo ei autem nostro persequeris.
+                            Illud scriptorem no his, eu probo democritum sea.',
+                            lat: 40.7061, lng: -73.9969, thumbnail: 'night',
                             cost: 50.99, lodging: 'Tent', num_sites: 3, max_guests: 6
                             )
-strange_place = Listing.create!(host_id: dali.id, title:'Strange Place', description:'A strange place.', lat: 40.7830, lng: -73.9590, thumbnail: 'forest',
+strange_place = Listing.create!(host_id: dali.id, title:'Strange Place',
+                            description:'A strange place.. Lorem ipsum dolor sit amet,
+                            duo duis quaeque adipiscing ad, diam iudico latine at mel. Nec no sint quaerendum,
+                            oporteat imperdiet constituam est et, vero oblique elaboraret ad mel.
+                            Vim eu recusabo splendide. Duo nostrud copiosae et,
+                            prima philosophia ad est. Sit ad ubique democritum,
+                            usu zril homero consequat ei, quo ei autem nostro persequeris.
+                            Illud scriptorem no his, eu probo democritum sea.',
+                            lat: 40.7830, lng: -73.9590, thumbnail: 'forest',
                             cost: 32.99, lodging: 'Cabin', num_sites: 5, max_guests: 12
                             )
-interesting_place = Listing.create!(host_id: bobby.id, title:'Interesting Place', description:'This is a very interesting place.', lat: 41.7061, lng: -74.9969, thumbnail: 'mountain',
+interesting_place = Listing.create!(host_id: bobby.id, title:'Interesting Place',
+                            description:'This is a very interesting place. Lorem ipsum dolor sit amet,
+                            duo duis quaeque adipiscing ad, diam iudico latine at mel. Nec no sint quaerendum,
+                            oporteat imperdiet constituam est et, vero oblique elaboraret ad mel.
+                            Vim eu recusabo splendide. Duo nostrud copiosae et,
+                            prima philosophia ad est. Sit ad ubique democritum,
+                            usu zril homero consequat ei, quo ei autem nostro persequeris.
+                            Illud scriptorem no his, eu probo democritum sea.',
+                            lat: 41.7061, lng: -74.9969, thumbnail: 'mountain',
                             cost: 150.99, lodging: 'Tent', num_sites: 10, max_guests: 3
                             )   
-unusual_place = Listing.create!(host_id: dali.id, title:'Unusual Place', description:'A very unusual place.', lat: 41.7830, lng: -75.9590, thumbnail: 'default',
+unusual_place = Listing.create!(host_id: dali.id, title:'Unusual Place',
+                            description:'A very unusual place. Lorem ipsum dolor sit amet,
+                            duo duis quaeque adipiscing ad, diam iudico latine at mel. Nec no sint quaerendum,
+                            oporteat imperdiet constituam est et,Sit ad ubique democritum,
+                            usu zril homero consequat ei, vero oblique elaboraret ad mel.
+                            Vim eu recusabo splendide. Duo nostrud copiosae et,
+                            prima philosophia ad est. Sit ad ubique democritum,
+                            usu zril homero consequat ei, quo ei autem nostro persequeris.
+                            Illud scriptorem no his, eu probo democritum sea.',
+                            lat: 41.7830, lng: -75.9590, thumbnail: 'default',
                             cost: 110.99, lodging: 'Cabin', num_sites: 6, max_guests: 11
                             )
-awesome_place = Listing.create!(host_id: bobby.id, title:'Awesome Place', description:'This place is awesome.', lat: 49.7061, lng: -79.9969, thumbnail: 'daylight',
+awesome_place = Listing.create!(host_id: bobby.id, title:'Awesome Place',
+                            description:'This place is awesome. Lorem ipsum dolor sit amet,
+                            duo duis quaeque adipiscing ad, diam iudico latine at mel. Nec no sint quaerendum,
+                            oporteat imperdiet constituam est et, vero oblique elaboraret ad mel.
+                            Vim eu recusabo splendide. Duo nostrud copiosae et,
+                            prima philosophia ad est. Sit ad ubique democritum,
+                            usu zril homero consequat ei, quo ei autem nostro persequeris. Sit ad ubique democritum,
+                            usu zril homero consequat ei,
+                            Illud scriptorem no his, eu probo democritum sea.',
+                            lat: 49.7061, lng: -79.9969, thumbnail: 'daylight',
                             cost: 25.99, lodging: 'Tent', num_sites: 7, max_guests: 5
                             )
-outstanding_place = Listing.create!(host_id: dali.id, title:'Outstanding Place', description:'This place is outstanding.', lat: 32.7830, lng: -69.9590, thumbnail: 'sunbeam',
+outstanding_place = Listing.create!(host_id: dali.id, title:'Outstanding Place',
+                            description:'This place is outstanding. Lorem ipsum dolor sit amet,
+                            duo duis quaeque adipiscing ad, diam iudico latine at mel. Nec no sint quaerendum,
+                            oporteat imperdiet constituam est et, vero oblique elaboraret ad mel.
+                            Vim eu recusabo splendide. Duo nostrud copiosae et,
+                            prima philosophia ad est. Duo nostrud copiosae et,
+                            prima philosophia ad est. Sit ad ubique democritum,
+                            usu zril homero consequat ei, quo ei autem nostro persequeris.
+                            Illud scriptorem no his, eu probo democritum sea.Duo nostrud copiosae et,
+                            prima philosophia ad est.',
+                            lat: 32.7830, lng: -69.9590, thumbnail: 'sunbeam',
                             cost: 99.99, lodging: 'Cabin', num_sites: 1, max_guests: 10
                             )
 
