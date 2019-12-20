@@ -1,34 +1,34 @@
 # README
 
 MystiCamp
-=========
+=
 
 Thank you for visiting MystiCamp. MystiCamp is a single-page, full stack clone of Hipcamp. Users can view listings, see their locations, and view the attributes of each listing.
 
 Technologies Implemented:
-----------------------------
+=
+- ### Front End: 
+   - React
+   - Redux
 
-### Front End: 
-- React
-- Redux
-
-### Back End:
-- PostgreSQL
-- Ruby on Rails
+ - ### Back End:
+   - PostgreSQL
+   - Ruby on Rails
 
 Features:
----------
-### User Authenication
-- Users can securely create an account and log in/log out with ease
-- Demo user log in available for guests
-### Listings index page
-- View thumbnail of each listing
-- View subtitle of each listing
-### Listing show page
-- View listing attributes
-- View listing location 
+=
+ - ### User Authenication
+   - Users can securely create an account and log in/log out with ease
+   - Demo user log in available for guests
+ - ### Listings index page
+   - View thumbnail of each listing
+   - View subtitle of each listing
+ - ### Listing show page
+   - View listing attributes
+   - View listing location 
 
-### An interesting feature worth noting is the polymorphic association implemented like so:
+
+### One interesting feature worth noting is the polymorphic association implemented like so:
 ```ruby
 class Listing < ApplicationRecord
     belongs_to :host,
