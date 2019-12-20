@@ -13,9 +13,6 @@ class ListingShow extends React.Component {
         this.props.fetchListing(this.props.match.params.listingId);
     }
 
-    // <i class="fas fa-campground"></i>
-    // <i class="fas fa-home"></i>
-
     render() {
         if (!this.props.listing) return (
             <div>problem</div>
@@ -27,6 +24,8 @@ class ListingShow extends React.Component {
                 amenity_icon = <i className="fas fa-wifi"></i>;
             } else if (amenity_name === 'Showers') {
                 amenity_icon = <i className="fas fa-shower"></i>;
+            } else if (amenity_name === 'Kitchen') {
+                amenity_icon = <i className="fas fa-utensils"></i>
             } else {
                 amenity_icon = <i className="fas fa-certificate"></i>;
             }
@@ -39,6 +38,8 @@ class ListingShow extends React.Component {
                 activity_icon = <i className="fas fa-swimmer"></i>;
             } else if (activity_name === 'Fishing') {
                 activity_icon = <i className="fas fa-fish"></i>;
+            } else if (activity_name === 'Boating') {
+                activity_icon = <i className="fas fa-anchor"></i>;
             } else {
                 activity_icon = <i className="fas fa-certificate"></i>;
             }
@@ -51,6 +52,8 @@ class ListingShow extends React.Component {
                 essential_icon = <i className="fas fa-fire-alt"></i>
             } else if (essential_name === 'Toilets') {
                 essential_icon = <i className="fas fa-toilet"></i>
+            } else if (essential_name === 'Pets') {
+                essential_icon = <i className="fab fa-suse"></i>
             } else {
                 essential_icon = <i className="fas fa-certificate"></i>;
             }
@@ -63,6 +66,8 @@ class ListingShow extends React.Component {
                 terrain_icon = <i className="fas fa-water"></i>
             } else if (terrain_name === 'Forest') {
                 terrain_icon = <i className="fas fa-tree"></i>
+            } else if (terrain_name === 'Desert') {
+                terrain_icon = <i className="fas fa-sun"></i>
             } else {
                 terrain_icon = <i className="fas fa-certificate"></i>;
             }
@@ -205,7 +210,7 @@ class ListingShow extends React.Component {
                                     <div className='vibes-body'>Clear today</div>
                                 </div>
                                 <div className='distance-container'>
-                                    <div className='vibes-title'>1.5</div>
+                                    <div className='vibes-title'>1.5hrs</div>
                                     <div className='vibes-body'>Away, as the crow flies</div>
                                 </div>
                             </div>
@@ -215,6 +220,23 @@ class ListingShow extends React.Component {
                         <div className='cost-container'>
                             <div className='cost'><i className="fas fa-dollar-sign"></i>{this.props.listing.cost}</div>
                             <div className='per-night'>per night</div>
+                            <div className='dates-booking-container'>
+                                <div className='dates-first'>
+                                    <div className='dates-first-title'>Check in</div>
+                                    <div className='dates-first-sub'>Select date</div>
+                                </div>
+                                <div className='dates-second'>
+                                    <div className='dates-first-title'>Check out</div>
+                                    <div className='dates-first-sub'>Select date</div>
+                                </div>
+                                <div className='dates-third'>
+                                     <div className='dates-first-title'>Guests</div>
+                                    <div className='dates-first-sub'><span>-</span> 4 <span>+</span></div>
+                                </div>
+                            </div>
+                            <div className='booking-container'>
+                                <a className='book-button'>Booking coming soon!</a>
+                            </div>
                         </div>
                     </div>
                 </div>

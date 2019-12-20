@@ -331,9 +331,7 @@
     box-shadow: 0px 3px 5px 1px rgba(230, 227, 227, 0.5);
     top: -48px;
     width: 320px;
-    height: 220px;
-    // height: 33%;
-    // width: 100%;
+    height: 215px;
     border-bottom: 1px solid #ebebeb;
 }
 .cost {
@@ -351,12 +349,74 @@
     font-family: helvetica;
     font-size: 15px;
     font-weight: lighter;
+    border-bottom: 1px solid #ebebeb;
+    padding-bottom: 15px;
+}
+.dates-booking-container {
+    height: 32%;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    color:#333333;
+}
+.dates-booking-container > div {
+    padding: 13px;
 }
 
+.dates-first-title {
+    font-weight: bold;
+}
+
+.dates-first-sub {
+    font-weight: lighter;
+    line-height: 42px;
+}
+.dates-first {
+    width: 115px;
+    border-right: 1px solid #ebebeb;
+}
+.dates-second {
+    width: 115px;
+    border-right: 1px solid #ebebeb;
+}
+.dates-first-sub span {
+    font-weight: bold;
+    margin-left: 3px;
+    word-spacing: 3px;
+}
+
+.booking-container {
+    border-top: 1px solid #ebebeb;
+    height: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.book-button {
+    text-align: center;
+    padding: 14px 0;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    width: 293px;
+    border: 3px solid rgb(49, 228, 168);
+    background-color: rgb(49, 228, 168);
+    transition: background-color .25s;
+}
+.book-button:hover {
+    background-color: white;
+    color: rgb(49, 228, 168);
+    border: 3px solid rgb(94, 199, 159);
+
+}
+
+
 .map-container {
+    margin-top: 22px;
     width: 100%;
     height: 389px;
     float: left;
     position: relative;
-    // margin-top: 30px;
+    top: -48px;
 }

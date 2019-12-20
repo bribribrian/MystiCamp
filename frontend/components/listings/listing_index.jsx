@@ -38,13 +38,13 @@ class ListingIndex extends React.Component {
                     </div>
                     <div className='search-right'>
                         <div className='dates-container'>
-                        <i class="far fa-calendar"></i>
+                        <i className="far fa-calendar"></i>
                             <div className='dates-text'> Enter dates</div>
                         </div>
                         <div className='category-container'>
-                            <i class="fas fa-campground"></i>
+                            <i className="fas fa-campground"></i>
                                 <div className='category-text'>All camping</div>
-                            <i class="fas fa-chevron-down"></i>
+                            <i className="fas fa-chevron-down"></i>
                         </div>
                         <div className='search-button-container'>
                             <div className='search'>Search</div>
