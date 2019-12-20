@@ -19,13 +19,16 @@ Technologies Implemented:
 Features:
 ---------
 ### User Authenication
-- Users can securely create an account and log in/log out with ease.
+- Users can securely create an account and log in/log out with ease
+- Demo user log in available for guests
 ### Listings index page
+- View thumbnail of each listing
+- View subtitle of each listing
 ### Listing show page
-- view listing attributes
-- view listing location 
+- View listing attributes
+- View listing location 
 
-## One interesting feature worth noting is the polymorphic association implemented like so:
+### An interesting feature worth noting is the polymorphic association implemented like so:
 ```ruby
 class Listing < ApplicationRecord
     belongs_to :host,
