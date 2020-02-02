@@ -8,12 +8,13 @@ class ApplicationController < ActionController::Base
 
     def ensure_logged_in
         unless current_user
-        render json: { base: ['invalid credentials'] }, status: 401
+            render json: { base: ['invalid credentials'] }, status: 401
         end
     end
 
     def login(user)
         session[:session_token] = user.reset_session_token!
+        @current_user = user
     end
 
     def logged_in?

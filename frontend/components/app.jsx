@@ -8,6 +8,8 @@ import { Switch, Route} from 'react-router-dom';
 import Modal from './modal/modal';
 import ListingIndex from './listings/listing_container';
 import ListingShowContainer from './listing_show/listing_show_container';
+import SearchBarContainer from './search_bar/search_bar_container';
+import DiscoverContainer from './discover/discover_container';
 
 const App = () => (
     <div className='app'>
@@ -30,9 +32,11 @@ const App = () => (
                 </div>
             </nav>
         </header>
+        <Route exact path='/' component={SearchBarContainer} />
+        <Route exact path='/' component={ListingIndex} />
         <Switch>
-            <Route exact path='/' component={ListingIndex} />
             <Route exact path='/listings/:listingId' component={ListingShowContainer} />
+            <Route path="/discover/" component={DiscoverContainer} />
         </Switch>
         <footer>
         <div className='pre-footer'>
@@ -54,9 +58,9 @@ const App = () => (
                     </div>
                     <div className='footer-right'>
                         <div className="footer-icons">
-                        <i className="fab fa-github-square"></i>
-                        <i className="fab fa-linkedin"></i>
-                        <i className="fab fa-angellist"></i>
+                        <a href='https://github.com/bribribrian'><i className="fab fa-github-square"></i></a>
+                        <a href='https://angel.co/bribribrian'><i className="fab fa-linkedin"></i></a>
+                        <a href='https://www.linkedin.com/in/brian-klein-a5a400129/'><i className="fab fa-angellist"></i></a>
                         </div>
                     </div>
                 </nav>

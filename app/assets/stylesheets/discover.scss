@@ -1,0 +1,34 @@
+
+.discover-container {
+}
+.discover-main {
+    // display: flex;
+}
+.discover-mid {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    margin-top: 70px;
+}
+.discover-index-container {
+    width: 822px;
+    display: flex;
+
+}
+.discover-list {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.discover-map-container {
+    display: flex;
+    min-height: 930px;
+    min-width: 460px;
+}
+
+.discover-map {
+    height: 100%;
+    width: 100%;
+}

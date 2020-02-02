@@ -5,7 +5,7 @@ class Api::ListingsController < ApplicationController
     end
 
     def index
-        @listings = Listing.all
+        @listings = bounds ? Listing.in_bounds(bounds) : Listing.all
         render :index
     end
 
@@ -14,9 +14,14 @@ class Api::ListingsController < ApplicationController
         render :show
     end
 
-
+    
     private
     def listing_params
         params.require(:listing).permit(:title, :description, :host_id, :lat, :lng, :thumbnail, :cost, :lodging, :num_sites, :max_guests)
     end
+
+    def bounds
+        params[:bounds]
+    end
+
 end

@@ -1,4 +1,4 @@
-class MarkerManager {
+export default class MarkerManager {
     constructor(map, handleClick){
         this.map = map;
         this.handleClick = handleClick;
@@ -19,9 +19,9 @@ class MarkerManager {
     }
 
     createMarkerFromListing(listing) {
-        const position = new google.map.Latlng(listing.lat, listing.lng);
+        // const position = new google.map.Latlng(listing.lat, listing.lng);
         const marker = new google.maps.Marker({
-            position,
+            position: { lat: listing.lat, lng: listing.lng},
             map: this.map,
             listingId: listing.id
         });
@@ -35,5 +35,3 @@ class MarkerManager {
         delete this.markers[marker.listingId];
     }
 }
-
-export default MarkerManager;

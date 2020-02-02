@@ -37,7 +37,7 @@
 .index-container {
     background-color: white;
     margin: 0 auto;
-    width: 85%;
+    // width: 85%;
     max-width: 1059px;
 
 }
@@ -56,14 +56,17 @@
     max-width: 1046px;
     flex-wrap: wrap;
 }
-// .search-bar-container {
-//     width: 60%;
-//     max-width: 551px;
-//     // display: flex;
-//     margin-bottom: 16px;
-//     margin-top: 16px;
+.search-bar-container {
+    // width: 60%;
+    // max-width: 551px;
+    // // display: flex;
+    // margin-bottom: 16px;
+    // margin-top: 16px;
+    height: 200px;
+    background-color: blueviolet;
+    margin-top: 70px;
 
-// }
+}
 .search-bar-box {
     border: 1px solid #ebebeb;
     height: 66px;
@@ -163,12 +166,13 @@
 }
 .index-items-container {
     display: flex;
-    justify-content: space-around;
-    flex-flow: row wrap;
-    align-items: stretch;
+    flex-wrap: wrap;
     margin-bottom: 40px;
+    max-width: 1059px;
+    // height: 100%;
 }
 .listing-index-item {
+    margin: 11px;
     border: 1px solid #ebebeb;
     margin-top: 25px;
     flex-direction: column;
@@ -177,7 +181,7 @@
     background-color: white;
     cursor: pointer;
     max-height: 420px;
-    min-height: 327px;
+    // min-height: 327px;
     max-width: 340px;
     min-width: 308px;
     overflow: hidden;
@@ -191,7 +195,7 @@
     text-decoration-skip: spaces;
 }
 .thumbnail {
-    flex-grow: 1;
+    -grow: 1;
     display: flex;
     width: 100%;
     background-color: white;

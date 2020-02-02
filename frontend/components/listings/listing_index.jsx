@@ -27,7 +27,7 @@ class ListingIndex extends React.Component {
                     <div className='sub-header-two'>Book unique camping experiences on over <span className='sub-header-number'>300,000</span> campsites, cabins, RV parks, public parks and more.</div>
                 </div>
                 <div className='search-container'>
-                    <div className='search-bar-container'>
+                    <div className='search-bar-container1'>
                         <div className='search-bar-box'>
                             <div className="search-bar-left">
                             <i className="fas fa-search"></i>

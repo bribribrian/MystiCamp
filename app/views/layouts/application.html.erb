@@ -6,10 +6,12 @@
     <%= csp_meta_tag %>
 
 
-    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Rails.application.credentials.google[:api_key]}" %>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Rails.application.credentials.google[:api_key]}&libraries=places" %>
     <%= javascript_include_tag "https://kit.fontawesome.com/12ffa399b2.js" %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= favicon_link_tag asset_path('mysticamp_icon.png') %>
     <%= javascript_include_tag 'application' %>
+
     <script type="text/javascript">
       window.night = '<%=image_url('night.jpg')%>'
       window.daylight = '<%=image_url('daylight.jpg')%>'
@@ -26,12 +28,7 @@
       window.sunset = '<%=image_url('sunset.jpg')%>'
       window.waterbody = '<%=image_url('waterbody.jpg')%>'
     </script>
-    <% if logged_in? %>
-      <script type="text/javascript">
-        window.currentUser = 
-          <%= render("api/users/user.json.jbuilder", user: current_user).html_safe %>
-      </script>
-    <% end %>
+   
   </head>
 
   <body>
