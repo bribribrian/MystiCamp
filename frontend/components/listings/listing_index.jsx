@@ -22,7 +22,7 @@ class ListingIndex extends React.Component {
         return (
         <div className='index-main'>
             <div className='index-container'>
-                <div className='top-content'>
+                {/* <div className='top-content'>
                     <div className='sub-header-one'>Find yourself outside.</div>
                     <div className='sub-header-two'>Book unique camping experiences on over <span className='sub-header-number'>300,000</span> campsites, cabins, RV parks, public parks and more.</div>
                 </div>
@@ -50,7 +50,7 @@ class ListingIndex extends React.Component {
                             <div className='search'>Search</div>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 <div className='index-title'>Discover camping...</div>
                 <div className='index-items-container'>
                     {this.props.listings.map(listing => (

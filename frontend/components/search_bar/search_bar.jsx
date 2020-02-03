@@ -80,12 +80,37 @@ class SearchBar extends React.Component {
 
     render() {
         return (
-            <form className='search-bar-container' onSubmit={this.handleSubmit}>
-                <div className='search-bar-input-container'>
-                    <input className='search-bar-input' id='search-bar-input' type='search' placeholder='Search...' value={this.state.searchLocation} onChange={this.handleInput} />
+            <div className='search-bar-render'>
+                <div className='top-content-container'>
+                <div className='top-content'>
+                    <div className='sub-header-one'>Find yourself outside.</div>
+                    <div className='sub-header-two'>Book unique camping experiences on over <span className='sub-header-number'>300,000</span> campsites, cabins, RV parks, public parks and more.</div>
                 </div>
-                <button className='search-bar-button'>Search</button>
-            </form>
+                    <div className='search-container'>
+                        <form className='search-bar-container1' onSubmit={this.handleSubmit}>
+                            <div className='search-bar-box'>
+                                <input className='search-bar-input' id='search-bar-input' type='search' placeholder='Search...' value={this.state.searchLocation} onChange={this.handleInput} />
+                            </div>
+                            <div className='search-right'>
+                                <div className='dates-container'>
+                                <i className="far fa-calendar"></i>
+                                    <div className='dates-text'> Enter dates</div>
+                                </div>
+                            <div className='category-container'>
+                                <i className="fas fa-campground"></i>
+                                    <div className='category-text'>All camping</div>
+                                <i className="fas fa-chevron-down"></i>
+                            </div>
+                            <div className='search-button-container'>
+                                <button className='search'>Search</button>
+                            </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
         )
     }
 }
