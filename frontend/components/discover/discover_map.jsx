@@ -8,13 +8,20 @@ class DiscoverMap extends React.Component {
     }
 
     componentDidMount() {
+        window.scrollTo(0, 0);
         const { lat, lng } = queryString.parse(this.props.location.search);
         const latitude = parseFloat(lat);
         const longitude = parseFloat(lng);
         const mapOptions = {
             center: { lat: latitude, lng: longitude},
             zoom: 13,
-            mapTypeId: 'terrain'
+            mapTypeId: 'terrain',
+            mapTypeControl: false,
+            fullscreenControl: false,
+            zoomControlOptions: {
+                style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+                position: google.maps.ControlPosition.RIGHT_TOP
+            }
         };
 
         this.map = new google.maps.Map(this.mapNode, mapOptions);

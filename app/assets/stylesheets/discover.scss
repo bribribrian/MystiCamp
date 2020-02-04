@@ -2,33 +2,83 @@
 .discover-container {
 }
 .discover-main {
-    // display: flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.discover-top {
+    display: flex;
+    margin-top: 70px;
+    background-color: rgb(253,253,253);
+    border: 1px solid #ebebeb;
+    border-radius: 2px;
+    width: 1279px;
+    height: 64px;
 }
 .discover-mid {
     display: flex;
     height: 100%;
     width: 100%;
+    width: 1281px;
     flex-direction: row;
-    margin-top: 70px;
+    justify-content: space-between;
+    // margin-top: 70px;
 }
+.discover-mid-left {
+    display: flex;
+    flex-direction: column;
+}
+.discover-mid-left-top {
+    margin-top: 56px;
+    display: flex;
+    // height: 58px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #333333;
+    font-family: helvetica;
+}
+
 .discover-index-container {
-    width: 822px;
+    display: flex;
+    width: 790px;
     display: flex;
 
 }
 .discover-list {
+    // margin-right: 30px;
     display: flex;
     width: 100%;
     height: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
+.discover-list .listing-index-item {
+    min-width: 378px;
+    max-width: 370px;
+    min-height: 300px;
+    max-height: 300px;
+    padding: 0;
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0px 1px 5px 2px rgba(230, 227, 227, 0.5);
+}
+.discover-list .listing-index-item .thumbnail {
+    border-radius: 5px 5px 0px 0px
+}
 .discover-map-container {
     display: flex;
     min-height: 930px;
     min-width: 460px;
+    margin-top: 20px;
+    box-shadow: 0px 1px 5px 2px rgba(230, 227, 227, 0.5);
 }
 
 .discover-map {
     height: 100%;
     width: 100%;
+    
 }
+

@@ -89,7 +89,10 @@ class SearchBar extends React.Component {
                     <div className='search-container'>
                         <form className='search-bar-container1' onSubmit={this.handleSubmit}>
                             <div className='search-bar-box'>
+                                <div className="search-bar-left">
+                                <i className="fas fa-search"></i>
                                 <input className='search-bar-input' id='search-bar-input' type='search' placeholder='Search...' value={this.state.searchLocation} onChange={this.handleInput} />
+                                </div>
                             </div>
                             <div className='search-right'>
                                 <div className='dates-container'>
