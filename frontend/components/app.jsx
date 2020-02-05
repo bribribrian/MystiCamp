@@ -3,13 +3,14 @@ import React from 'react';
 import SignUpForm from './session_forms/sign_up_form';
 import LoginForm from './session_forms/login_form';
 import SplashNavContainer from './splash_nav/splash_nav_container';
-import { Switch, Route} from 'react-router-dom';
-// import { AuthRoute } from '../util/route_util';
+import { Switch, Route, Link} from 'react-router-dom';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Modal from './modal/modal';
 import ListingIndex from './listings/listing_container';
 import ListingShowContainer from './listing_show/listing_show_container';
 import SearchBarContainer from './search_bar/search_bar_container';
 import DiscoverContainer from './discover/discover_container';
+import UserShowContainer from './users/user_show_container';
 
 const App = () => (
     <div className='app'>
@@ -17,7 +18,7 @@ const App = () => (
         <header>
             <nav className='nav'>
                 <div className='left'>
-                    <a className='logo' href='/'>MystiCamp</a>
+                    <Link to="/" className='logo'>MystiCamp</Link>
                 </div>
                 <div className='right'>
                     <ul className='menu'>
@@ -37,6 +38,7 @@ const App = () => (
         <Switch>
             <Route exact path='/listings/:listingId' component={ListingShowContainer} />
             <Route path="/discover/" component={DiscoverContainer} />
+            <ProtectedRoute exact path='/users/:userId' component={UserShowContainer} />
         </Switch>
         <footer>
         <div className='pre-footer'>
