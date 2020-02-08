@@ -12,7 +12,7 @@ const SplashNav = ({currentUser, logout, openModal, errors, clearSessionErrors})
             <button className='log-in-button'onClick={() => openModal('login')}>Log in</button>
             <br/>
             <button className='sign-up-button' onClick={() => openModal('signup')}>Sign up</button>
-            <span className={errorsClass}>{errors}</span>
+            {/* <span className={errorsClass}>{errors}</span> */}
         </nav>
     );
 

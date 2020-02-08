@@ -1,7 +1,11 @@
 class Api::BookingsController < ApplicationController
 
     def index
-        @bookings = Booking.all 
+        if params[:userId]
+            @bookings = User.find(params[:userId]).bookings
+        else
+            @bookings = Booking.all 
+        end
         render :index
     end
 
@@ -31,7 +35,7 @@ class Api::BookingsController < ApplicationController
     def destroy 
         @booking = Booking.find(params[:id])
         @booking.destroy
-        render json: ["Booking canceled"]
+        render :show
     end
 
 

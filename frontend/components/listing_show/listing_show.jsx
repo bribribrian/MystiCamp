@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 import  ListingMap from '../listing_map/listing_map';
+import BookingFormContainer from '../bookings/booking_form_container';
 
 
 class ListingShow extends React.Component {
@@ -217,27 +218,29 @@ class ListingShow extends React.Component {
                             </div>
                         </div>
                     </div>
+                    {/* booking-form-container goes here */}
                     <div className='aside-container'>
                         <div className='cost-container'>
                             <div className='cost'><i className="fas fa-dollar-sign"></i>{this.props.listing.cost}</div>
                             <div className='per-night'>per night</div>
                             <div className='dates-booking-container'>
-                                <div className='dates-first'>
+                                <BookingFormContainer/>
+                                {/* <div className='dates-first'>
                                     <div className='dates-first-title'>Check in</div>
                                     <div className='dates-first-sub'>Select date</div>
                                 </div>
                                 <div className='dates-second'>
                                     <div className='dates-first-title'>Check out</div>
                                     <div className='dates-first-sub'>Select date</div>
-                                </div>
-                                <div className='dates-third'>
+                                </div> */}
+                                {/* <div className='dates-third'>
                                      <div className='dates-first-title'>Guests</div>
                                     <div className='dates-first-sub'><span>-</span> 4 <span>+</span></div>
-                                </div>
+                                </div> */}
                             </div>
-                            <div className='booking-container'>
+                            {/* <div className='booking-container'>
                                 <a className='book-button'>Booking coming soon!</a>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
