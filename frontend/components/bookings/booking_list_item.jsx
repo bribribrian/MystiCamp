@@ -13,13 +13,15 @@ class BookingListItem extends React.Component {
     };
 
     render() {
-        const { listing_id, start_date, end_date, num_guests, total_price} = this.props.booking;
+        const { listing_name, start_date, end_date, num_guests, total_price} = this.props.booking;
         return (
             <div className='booking-list-item' >
                 {/* <img className='thumbnail' src={window[thumbnail]}/> */}
                 <div className='booking-list-item-text-container'>
-                    <span className='booking-list-item-title'>{listing_id} from {start_date} through {end_date}</span>
-                    <span className='booking-list-item-details'>Number of Guests:{num_guests} Total Cost:{total_price}</span>
+                    <span className='booking-list-item-title'>{listing_name}</span>
+                    <span className='booking-list-item-check-in'>Check In: {start_date}</span>
+                    <span className='booking-list-item-check-out'>Check Out: {end_date}</span>
+                    {/* <span className='booking-list-item-details'>Number of Guests:{num_guests} Total Cost:{total_price}</span> */}
                     <button className='cancel-booking-button' onClick={this.handleClick}>Cancel Booking</button>
                 </div>
             </div>

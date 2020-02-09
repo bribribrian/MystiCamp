@@ -85,7 +85,7 @@ class LoginForm extends React.Component {
                             <input className='submit-button-style' type="submit" value="Log In" />
                             {/* <button className='demo-user-login' onClick={() => {this.state = { username: 'Demo_User', password: 'password'}}}>Demo user!</button> */}
                             <div className='modal-footer'>
-                                <div className='footer-question'>Don't have a Hipcamp account?
+                                <div className='footer-question'>Don't have a Mysticamp account?
                                     {/* <Link className='footer-link' to='/signup'> Sign up!</Link> */}
                                     {/* <a className='footer-link' onClick={() => {this.setState({ ui: {modal: 'signup'}})}}> Sign up!</a> */}
                                     <a className='footer-link' onClick={this.handleClick}> Sign up!</a>  

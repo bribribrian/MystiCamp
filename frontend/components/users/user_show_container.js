@@ -11,7 +11,6 @@ const mSTP = (state, ownProps) => {
     //     bookings
     // };
     const bookings = Object.values(state.entities.bookings);
-    debugger;
     return ({
         user,
         bookings

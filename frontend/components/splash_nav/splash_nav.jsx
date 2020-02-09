@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link} from 'react-router-dom';
 
 const SplashNav = ({currentUser, logout, openModal, errors, clearSessionErrors}) => {
     let errorsClass = 'noErrors';
@@ -22,7 +22,8 @@ const SplashNav = ({currentUser, logout, openModal, errors, clearSessionErrors})
                 <button className='logged-in-dropdown-button'>Menu</button>
                     <div className='dropdown-menu'>
                         <ul className='dropdown-list-items'>
-                            <li><a className='logout-button' onClick={logout}>Log out</a></li>
+                            <li><div className='dropdown-list-item-li-container'><Link to={`/users/${currentUser.id}`} className='link-to-user-show'>Bookings</Link></div></li>
+                            <li><div className='dropdown-list-item-li-container'><a className='logout-button' onClick={logout}>Log out</a></div></li>
                         </ul>
                     </div>
             </div>

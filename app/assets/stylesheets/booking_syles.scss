@@ -41,69 +41,102 @@
 }
 .booking-form-container {
     display: flex;
-    width: 330px;
+    width: 295px;
+    padding-top: 10px;
+}
+.booking-form {
+    display: flex;
+    flex-direction: column;
+}
+.booking-form-top {
+    display: flex;
+    height: 38%;
+    width: 100%;
+    // border-bottom: 1px solid #ebebeb;
+    // padding-left: 10px;
+    // padding-right: 10px;
+}
+.booking-form-top > div{
+    width: 100%;
 }
 .dates-booking-container {
-    height: 32%;
+    height: 64%;
     border: none;
     display: flex;
     flex-direction: row;
     font-size: 16px;
     color:#333333;
     width: 100%;
+    border-bottom: 1px solid #ebebeb;
 }
 .date-input-container {
-    width: 100%;
+    width: 35%;
     display: flex;
     flex-direction: row;
+    height: 100%;
+}
+.booking-form-container {
+    display: flex;
+    height: 100%;
 }
 .SingleDatePicker.SingeDatePicker_1 {
     display: flex;
     
 }
 #booking_start_date {
-    width: 115px;
+    // width: 115px;
+    width: 100%;
     padding: 0px;
-    border-right: 1px solid #ebebeb;
+    height: 100%;
+    // border-right: 1px solid #ebebeb;
     padding: 0px;
 }
 #booking_end_date {
     padding: 0px;
 }
 .dates-booking-container > div {
-    padding: 13px;
+    padding-left: 13px;
 }
 
-.dates-first-title {
-    font-weight: bold;
-}
+// .dates-first-title {
+//     font-weight: bold;
+// }
 
-.dates-first-sub {
-    font-weight: lighter;
-    line-height: 42px;
+// .dates-first-sub {
+//     font-weight: lighter;
+//     line-height: 42px;
+// }
+// .dates-first {
+//     width: 115px;
+//     border-right: 1px solid #ebebeb;
+// }
+// .dates-second {
+//     width: 115px;
+//     border-right: 1px solid #ebebeb;
+// }
+// .dates-first-sub span {
+//     font-weight: bold;
+//     margin-left: 3px;
+//     word-spacing: 3px;
+// }
+.dates-third {
+    height: 100%;
 }
-.dates-first {
-    width: 115px;
-    border-right: 1px solid #ebebeb;
-}
-.dates-second {
-    width: 115px;
-    border-right: 1px solid #ebebeb;
-}
-.dates-first-sub span {
-    font-weight: bold;
-    margin-left: 3px;
-    word-spacing: 3px;
-}
-
-.booking-container {
-    border-top: 1px solid #ebebeb;
-    height: 33%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+// .booking-container {
+    
+//     // height: 33%;
+//     display: flex;
+//     // justify-content: center;
+//     // align-items: center;
+// }
+.booking-button-container {
+    margin-top: 13px;
 }
 .book-button {
+    outline: none;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
     text-align: center;
     padding: 14px 0;
     color: white;

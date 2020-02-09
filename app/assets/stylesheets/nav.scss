@@ -115,7 +115,7 @@
   }
   .dropdown-menu a {
     color: #333333;
-    padding: 12px 16px;
+    padding: 12px;
     text-decoration: none;
     display: block;
   }
@@ -156,6 +156,27 @@
     border-color: #ebebeb transparent;
   }
  
+  .dropdown-list-item-li-container {
+    border-bottom: 1px solid #ebebeb;
+    width: 80%;
+    margin: 0 auto;
+
+
+  }
+  .link-to-user-show {
+    font-family: helvetica;
+    color: #333333;
+    font-size: 15px;
+    padding-left: 0px;
+    margin-left: 0px;
+  }
+  .link-to-user-show:hover{
+      transition: margin-left .25s;
+      margin-left: 10px;
+      color: #333333;
+  }
+
+
   .logout-button {
     font-family: helvetica;
     color: #333333;

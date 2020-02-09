@@ -1,17 +1,142 @@
 .user-show-container {
+    display: flex;
     margin-top: 70px;
-    background-color: chartreuse;
-    height: 200px;
+    background-color: rgb(249,249,249);
+    border: 1px solid #ebebeb;
 }
 
 .user-profile {
-    background-color: cornflowerblue;
+    background-color: white;
+    display: flex;
 }
-
+.user-profile-container {
+    display: flex;
+    flex-direction: row;
+}
+.user-profile-information {
+    display: flex;
+    flex-direction: column;
+    width: 265px;
+    min-width: 265px;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+.user-profile-information-details-1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.user-profile-icon {
+    display: flex;
+    font-size: 48px;
+    color: #333333;
+}
 .user-username {
-    background-color: crimson;
+    display: flex;
+    font-size: 20px;
+    font-family: helvetica;
+    font-weight: bold;
+    color: #333333;
+    margin-left: 10px;
+    
+}
+.user-profile-information-details-2{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.25;
+}
+.user-created-at {
+    display: flex;
+    font-size: 16px;
+    font-family: helvetica;
+    font-weight: bold;
+    color: #333333;
+}
+.user-created-at-date {
+    display: flex;
+    font-size: 14px;
+    font-family: helvetica;
+    color: #333333;
 }
 
-.user-bookings {
-    background-color: darkgreen;
+.user-bookings-container {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    border-left: 1px solid #ebebeb;
+    border-right: 1px solid #ebebeb;
+}
+
+.user-bookings-title {
+    display: flex;
+    font-size: 20px;
+    padding: 29px;
+    font-family: helvetica;
+    font-weight: bold;
+    color: #333333;
+}
+
+.booking-list-item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ebebeb;
+    margin-left: 29px;
+    margin-right: 29px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.booking-list-item-text-container {
+    display: flex;
+    flex-direction: column;
+}
+.booking-list-item-title {
+    display: flex;
+    font-size: 18px;
+    font-family: helvetica;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 5px;
+}
+.booking-list-item-check-in {
+    display: flex;
+    font-size: 14px;
+    font-family: helvetica;
+    // font-weight: bold;
+    color: #333333;
+    line-height: 1.25;
+}
+.booking-list-item-check-out {
+    display: flex;
+    font-size: 14px;
+    font-family: helvetica;
+    // font-weight: bold;
+    color: #333333;
+    line-height: 1.25;
+}
+.booking-list-item-details {
+    display: flex;
+}
+.cancel-booking-button {
+    outline: none;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-align: center;
+    padding: 5px 0;
+    padding-bottom: 6px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    width: 120px;
+    border: 3px solid rgb(49, 228, 168);
+    background-color: rgb(49, 228, 168);
+    transition: background-color .25s;
+    margin-top: 10px;
+}
+.cancel-booking-button:hover {
+    background-color: white;
+    color: rgb(49, 228, 168);
+    border: 3px solid rgb(94, 199, 159);
+
 }

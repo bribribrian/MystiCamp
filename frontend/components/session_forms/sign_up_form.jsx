@@ -44,7 +44,7 @@ class SignUpForm extends React.Component {
                         <div className='signup-form'>
                             <form onSubmit={this.handleSubmit}>
                                 <div className='form-greet'>
-                                    <div className='form-welcome'>Join Hipcamp</div>
+                                    <div className='form-welcome'>Join Mysticamp</div>
                                     <div className='form-welcome-subtitle'>Discover the best camping near me</div>
                                 </div>
                                 <div className='name-inputs'>
@@ -74,16 +74,16 @@ class SignUpForm extends React.Component {
                                     onChange={this.update('password')}
                                     required
                                 />
-                                <div className="form-question-signup">
+                                {/* <div className="form-question-signup">
                                 <span className='placeholder-box'></span> I'm curious about sharing my land with campers
-                                </div>
+                                </div> */}
                                 <br/>
                                 <input className='submit-button-style' type="submit" value="Join Hipcamp" />
                                 {/* <button className='demo-user-login' onClick={() => {this.state = { username: 'Demo_User', password: 'password'}}}>Demo user!</button> */}
-                                <div className='privacy-policy-agreement'>By signing up, I agree to Hipcamp's</div>
+                                <div className='privacy-policy-agreement'>By signing up, I agree to Mysticamp's</div>
                                  <div className='privacy-policy-agreement-2'>terms and privacy policy.</div>
                                 <div className='modal-footer'>
-                                    <div className='footer-question'>Already a Hipcamper?
+                                    <div className='footer-question'>Already a Mysticamper?
                                         <a className='footer-link' onClick={this.handleClick}>Log In!</a>
                                     </div>
                                 </div>
