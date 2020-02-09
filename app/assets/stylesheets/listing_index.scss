@@ -269,12 +269,19 @@
     text-decoration: underline;
     text-decoration-skip: spaces;
 }
+.listing-index-item-details-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
 .thumbnail {
     display: flex;
-    width: 100%;
+    // width: 100%;
     background-color: white;
     // width: 340px;
     // height: 100%;
+    height: 80%;
 }
 .thumbnail-text {
     margin-top: 20px;

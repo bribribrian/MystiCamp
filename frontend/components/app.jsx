@@ -55,14 +55,14 @@ const App = () => (
                         <div>MystiCamp</div>
                         <div className='footer-text-small'> by Brian Klein</div>
                         </div>
-                        <div className='footer-text'>Terms of Service</div>
-                        <div className='footer-text'>Privacy Policy</div>
+                        {/* <div className='footer-text'>Terms of Service</div>
+                        <div className='footer-text'>Privacy Policy</div> */}
                     </div>
                     <div className='footer-right'>
                         <div className="footer-icons">
                         <a href='https://github.com/bribribrian'><i className="fab fa-github-square"></i></a>
-                        <a href='https://angel.co/bribribrian'><i className="fab fa-linkedin"></i></a>
-                        <a href='https://www.linkedin.com/in/brian-klein-a5a400129/'><i className="fab fa-angellist"></i></a>
+                        <a href='https://www.linkedin.com/in/brian-klein-a5a400129/'><i className="fab fa-linkedin"></i></a>
+                        <a href='https://angel.co/bribribrian'><i className="fab fa-angellist"></i></a>
                         </div>
                     </div>
                 </nav>

@@ -78,7 +78,7 @@ outstanding_place = Listing.create!(host_id: dali.id, title:'Outstanding Place',
                             usu zril homero consequat ei, quo ei autem nostro persequeris.
                             Illud scriptorem no his, eu probo democritum sea.Duo nostrud copiosae et,
                             prima philosophia ad est.',
-                            lat: 47.7830, lng: -75.9590, thumbnail: 'panmountains',
+                            lat: 47.7830, lng: -121.9590, thumbnail: 'panmountains',
                             cost: 99.99, lodging: 'Cabin', num_sites: 1, max_guests: 10
                             )
 radical_place = Listing.create!(host_id: bobby.id, title:'Radical Place',
@@ -102,7 +102,7 @@ beautiful_place = Listing.create!(host_id: dali.id, title:'Beautiful Place',
                             prima philosophia ad est. Sit ad ubique democritum,
                             usu zril homero consequat ei, quo ei autem nostro persequeris.
                             Illud scriptorem no his, eu probo democritum sea.',
-                            lat: 47.7830, lng: -76.9590, thumbnail: 'mistyfog',
+                            lat: 30.7830, lng: -90.9590, thumbnail: 'mistyfog',
                             cost: 110.99, lodging: 'Cabin', num_sites: 6, max_guests: 11
                             )
 fun_place = Listing.create!(host_id: bobby.id, title:'Fun Place',
@@ -113,9 +113,79 @@ fun_place = Listing.create!(host_id: bobby.id, title:'Fun Place',
                             prima philosophia ad est. Sit ad ubique democritum,
                             usu zril homero consequat ei, quo ei autem nostro persequeris.
                             Illud scriptorem no his, eu probo democritum sea.',
-                            lat: 48.7061, lng: -78.9969, thumbnail: 'greengrass',
+                            lat: 30.7061, lng: -104.9969, thumbnail: 'greengrass',
                             cost: 50.99, lodging: 'Tent', num_sites: 3, max_guests: 6
-                            )                   
+                            )
+cold_place = Listing.create!(host_id: bobby.id, title:'Cold Place',
+                            description:'This is a very cold place. Lorem ipsum dolor sit amet,
+                            duo duis quaeque adipiscing ad, diam iudico latine at mel. Nec no sint quaerendum,
+                            oporteat imperdiet constituam est et, vero oblique elaboraret ad mel.
+                            Vim eu recusabo splendide. Duo nostrud copiosae et,
+                            prima philosophia ad est. Sit ad ubique democritum,
+                            usu zril homero consequat ei, quo ei autem nostro persequeris.
+                            Illud scriptorem no his, eu probo democritum sea.',
+                            lat: 39.7061, lng: -104.9969, thumbnail: 'night',
+                            cost: 50.99, lodging: 'Tent', num_sites: 3, max_guests: 6
+                            )
+hot_place = Listing.create!(host_id: dali.id, title:'Hot Place',
+                            description:'A hot place.. Lorem ipsum dolor sit amet,
+                            duo duis quaeque adipiscing ad, diam iudico latine at mel. Nec no sint quaerendum,
+                            oporteat imperdiet constituam est et, vero oblique elaboraret ad mel.
+                            Vim eu recusabo splendide. Duo nostrud copiosae et,
+                            prima philosophia ad est. Sit ad ubique democritum,
+                            usu zril homero consequat ei, quo ei autem nostro persequeris.
+                            Illud scriptorem no his, eu probo democritum sea.',
+                            lat: 34.7830, lng: -118.9590, thumbnail: 'blueclouds',
+                            cost: 32.99, lodging: 'Cabin', num_sites: 5, max_guests: 12
+                            )
+warm_place = Listing.create!(host_id: bobby.id, title:'Warm Place',
+                            description:'This is a very warm place. Lorem ipsum dolor sit amet,
+                            duo duis quaeque adipiscing ad, diam iudico latine at mel. Nec no sint quaerendum,
+                            oporteat imperdiet constituam est et, vero oblique elaboraret ad mel.
+                            Vim eu recusabo splendide. Duo nostrud copiosae et,
+                            prima philosophia ad est. Sit ad ubique democritum,
+                            usu zril homero consequat ei, quo ei autem nostro persequeris.
+                            Illud scriptorem no his, eu probo democritum sea.',
+                            lat: 30.7061, lng: -97.9969, thumbnail: 'mountain',
+                            cost: 150.99, lodging: 'Tent', num_sites: 10, max_guests: 3
+                            ) 
+rainy_place = Listing.create!(host_id: dali.id, title:'Rainy Place',
+                            description:'A very Rainy place. Lorem ipsum dolor sit amet,
+                            duo duis quaeque adipiscing ad, diam iudico latine at mel. Nec no sint quaerendum,
+                            oporteat imperdiet constituam est et,Sit ad ubique democritum,
+                            usu zril homero consequat ei, vero oblique elaboraret ad mel.
+                            Vim eu recusabo splendide. Duo nostrud copiosae et,
+                            prima philosophia ad est. Sit ad ubique democritum,
+                            usu zril homero consequat ei, quo ei autem nostro persequeris.
+                            Illud scriptorem no his, eu probo democritum sea.',
+                            lat: 38.7830, lng: -103.9590, thumbnail: 'greenlake',
+                            cost: 110.99, lodging: 'Cabin', num_sites: 6, max_guests: 11
+                            )  
+sunny_place = Listing.create!(host_id: bobby.id, title:'Sunny Place',
+                            description:'This place is sunny. Lorem ipsum dolor sit amet,
+                            duo duis quaeque adipiscing ad, diam iudico latine at mel. Nec no sint quaerendum,
+                            oporteat imperdiet constituam est et, vero oblique elaboraret ad mel.
+                            Vim eu recusabo splendide. Duo nostrud copiosae et,
+                            prima philosophia ad est. Sit ad ubique democritum,
+                            usu zril homero consequat ei, quo ei autem nostro persequeris. Sit ad ubique democritum,
+                            usu zril homero consequat ei,
+                            Illud scriptorem no his, eu probo democritum sea.',
+                            lat: 33.7061, lng: -117.9969, thumbnail: 'daylight',
+                            cost: 25.99, lodging: 'Tent', num_sites: 7, max_guests: 5
+                            ) 
+snowy_place = Listing.create!(host_id: dali.id, title:'Snowy Place',
+                            description:'This place is Snowy. Lorem ipsum dolor sit amet,
+                            duo duis quaeque adipiscing ad, diam iudico latine at mel. Nec no sint quaerendum,
+                            oporteat imperdiet constituam est et, vero oblique elaboraret ad mel.
+                            Vim eu recusabo splendide. Duo nostrud copiosae et,
+                            prima philosophia ad est. Duo nostrud copiosae et,
+                            prima philosophia ad est. Sit ad ubique democritum,
+                            usu zril homero consequat ei, quo ei autem nostro persequeris.
+                            Illud scriptorem no his, eu probo democritum sea.Duo nostrud copiosae et,
+                            prima philosophia ad est.',
+                            lat: 45.7830, lng: -121.9590, thumbnail: 'panmountains',
+                            cost: 99.99, lodging: 'Cabin', num_sites: 1, max_guests: 10
+                            ) 
 
 wifi = Amenity.create!(name: 'Wifi')
 showers = Amenity.create!(name: 'Showers')
@@ -219,5 +289,5 @@ listings_join_desert_five = ListingJoin.create!(listing_id: beautiful_place.id, 
 listings_join_desert_six = ListingJoin.create!(listing_id: strange_place.id, attributable_id: desert.id, attributable_type: 'Terrain')
 
 
-demo_user_booking_one = Booking.create!(user_id: demo.id, listing_id: cool_place.id, start_date: "Mon March 16 2020", end_date: "Mon March 23 2020", total_price: 50.99, num_guests: 4)
-demo_user_booking_two = Booking.create!(user_id: demo.id, listing_id: strange_place.id, start_date: "Mon March 16 2020", end_date: "Mon March 23 2020", total_price: 32.99, num_guests: 4)
+demo_user_booking_one = Booking.create!(user_id: demo.id, listing_id: cool_place.id, start_date: "2020/02/10", end_date: "2020/02/12", total_price: 50.99, num_guests: 4)
+demo_user_booking_two = Booking.create!(user_id: demo.id, listing_id: strange_place.id, start_date: "2020/02/10", end_date: "2020/02/12", total_price: 32.99, num_guests: 4)

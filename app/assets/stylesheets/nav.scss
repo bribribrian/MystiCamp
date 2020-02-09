@@ -111,7 +111,7 @@
     display: none;
     position: absolute;
     min-width: 160px;
-    z-index: 1;
+    z-index: 1000;
   }
   .dropdown-menu a {
     color: #333333;
@@ -130,6 +130,7 @@
     background-color: white;
     display: block;
     right: -5px;
+    z-index: 200;
   }
 
   .dropdown .dropdown-list-items:after {

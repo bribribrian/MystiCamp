@@ -19,7 +19,7 @@ footer{
     width: 1113px;
     border-top: 1px solid #ebebeb;
     font-family: helvetica;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 600;
     display: flex;
     justify-content: space-between;
@@ -43,29 +43,31 @@ footer{
     .footer-left {
         width: 500px;
         display: flex;
+        align-items: flex-end;
         justify-content: space-between;
         }
     .footer-left-container {
-        align-items: center;
+        align-items: flex-end;
         display: flex;
         justify-content: space-between;
     }
     .footer-icons {
         
         width: 100%;
-        font-size: 24px;
+        font-size: 36px;
         font-weight: 400;
         display:flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-end;
     }
     i {
         cursor: pointer;
     }
     .footer-center-left {
-        }
+        align-items: flex-end;
+    }
     .footer-right {
-        width: 100px;
+        width: 110px;
         display: flex;
         justify-content: space-between;
         align-items: center;
