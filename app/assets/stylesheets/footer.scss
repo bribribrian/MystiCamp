@@ -53,7 +53,7 @@ footer{
     }
     .footer-icons {
         
-        width: 100%;
+        width: 52%;
         font-size: 36px;
         font-weight: 400;
         display:flex;
@@ -66,11 +66,16 @@ footer{
     .footer-center-left {
         align-items: flex-end;
     }
+    .about-me-link {
+        font-size: 18px;
+        display: flex;
+        text-decoration: none;
+    }
     .footer-right {
-        width: 110px;
+        width: 190px;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-end;
     }
 
 }

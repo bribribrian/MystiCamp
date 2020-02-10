@@ -59,10 +59,11 @@ const App = () => (
                         <div className='footer-text'>Privacy Policy</div> */}
                     </div>
                     <div className='footer-right'>
+                        <a className='about-me-link' target="_blank" href='https://bribribrian.github.io'>About Me</a>
                         <div className="footer-icons">
-                        <a href='https://github.com/bribribrian'><i className="fab fa-github-square"></i></a>
-                        <a href='https://www.linkedin.com/in/brian-klein-a5a400129/'><i className="fab fa-linkedin"></i></a>
-                        <a href='https://angel.co/bribribrian'><i className="fab fa-angellist"></i></a>
+                        <a target="_blank" href='https://github.com/bribribrian'><i className="fab fa-github-square"></i></a>
+                        <a target="_blank" href='https://angel.co/bribribrian'><i className="fab fa-angellist"></i></a>
+                        <a target="_blank" href='https://www.linkedin.com/in/brian-klein-a5a400129/'><i className="fab fa-linkedin"></i></a>
                         </div>
                     </div>
                 </nav>
