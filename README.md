@@ -2,8 +2,11 @@
 
 MystiCamp
 =
+[MystiCamp Live Site](https://mysticamp.herokuapp.com/)
 
-Thank you for visiting MystiCamp. MystiCamp is a single-page, full stack clone of Hipcamp. Users can view listings, see their locations, and view the attributes of each listing, search listings by location, and make bookings.
+Thank you for visiting MystiCamp. MystiCamp is a single-page, full stack clone of [HipCamp.com](https://www.hipcam.com). Users can view listings, see their locations, and view the attributes of each listing, search listings by location, and make bookings.
+
+![Main Page](https://ootd-dev.s3.amazonaws.com/mysticamp-search-screen-shot.png)
 
 Technologies Implemented:
 =
@@ -68,29 +71,30 @@ This is implemented so that backend and database management will be more clean a
 ### Search feature utilizes Google Maps Places Autocomplete, Geocoder, and Javascript Promises:
 ```Javascript
 findGeocode(location) {
-        return new Promise(function(resolve, reject) {
-            const geocoder = new google.maps.Geocoder();
-            geocoder.geocode({ 'address': location}, function (results, status) {
-                if (status == google.maps.GeocoderStatus.OK) {
-                    const lat = results[0].geometry.location.lat();
-                    const lng = results[0].geometry.location.lng();
-                    resolve([lat, lng]);
-                } else {
-                    reject(new Error('location error'));
-                };
-            });
-        });
-    };
+  return new Promise(function(resolve, reject) {
+    const geocoder = new google.maps.Geocoder();
+    geocoder.geocode({ 'address': location}, function (results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        const lat = results[0].geometry.location.lat();
+        const lng = results[0].geometry.location.lng();
+        resolve([lat, lng]);
+      } else {
+        reject(new Error('location error'));
+      };
+    });
+  });
+};
 
-    handleSubmit(e) {
-        e.preventDefault();
-        this.props.receiveLocation(this.state);
-        const locationData = this.processGeocode(this.state.searchLocation, this.findGeocode);
-        Promise.all(locationData)
-        .then((returnData) => { this.navigateToListingIndex(returnData);
-        })
-    };
+handleSubmit(e) {
+  e.preventDefault();
+  this.props.receiveLocation(this.state);
+  const locationData = this.processGeocode(this.state.searchLocation, this.findGeocode);
+  Promise.all(locationData)
+    .then((returnData) => { this.navigateToListingIndex(returnData);
+  })
+};
 ```
+![Search Results](https://ootd-dev.s3.amazonaws.com/mysticamp-searchmap-screen-shot.png)
 ---
 ## Future Features Include:
 
