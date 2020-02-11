@@ -6,7 +6,7 @@ MystiCamp
 
 Thank you for visiting MystiCamp. MystiCamp is a single-page, full stack clone of [HipCamp.com](https://www.hipcam.com). Users can view listings, see their locations, and view the attributes of each listing, search listings by location, and make bookings.
 
-![Main Page](https://ootd-dev.s3.amazonaws.com/mysticamp-search-screen-shot.png)
+<img src="https://ootd-dev.s3.amazonaws.com/mysticamp-search-screen-shot.png">
 
 Technologies Implemented:
 =
@@ -94,7 +94,7 @@ handleSubmit(e) {
   })
 };
 ```
-![Search Results](https://ootd-dev.s3.amazonaws.com/mysticamp-searchmap-screen-shot.png)
+<img src="https://ootd-dev.s3.amazonaws.com/mysticamp-searchmap-screen-shot.png">
 ---
 ## Future Features Include:
 
