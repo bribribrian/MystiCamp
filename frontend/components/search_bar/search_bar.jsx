@@ -11,6 +11,8 @@ class SearchBar extends React.Component {
     this.handleInput = this.handleInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.navigateToListingIndex = this.navigateToListingIndex.bind(this);
+    this.processGeocode = this.processGeocode.bind(this);
+    this.findGeocode = this.findGeocode.bind(this);
     }
 
     componentDidMount() {
@@ -42,40 +44,36 @@ class SearchBar extends React.Component {
         });
     };
 
+    processGeocode (location, inputFunction) {
+        let latLng = [];
+        for(let i = 0; i < 1; i++) {
+            latLng.push(inputFunction(location))
+        }
+        return latLng;
+    };
+
+    findGeocode(location) {
+        return new Promise(function(resolve, reject) {
+            const geocoder = new google.maps.Geocoder();
+            geocoder.geocode({ 'address': location}, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    const lat = results[0].geometry.location.lat();
+                    const lng = results[0].geometry.location.lng();
+                    resolve([lat, lng]);
+                } else {
+                    reject(new Error('location error'));
+                };
+            });
+        });
+    };
+
     handleSubmit(e) {
         e.preventDefault();
-
-        function findGeocode(location) {
-            return new Promise(function(resolve, reject) {
-                const geocoder = new google.maps.Geocoder();
-                geocoder.geocode({ 'address': location}, function (results, status) {
-                    if (status == google.maps.GeocoderStatus.OK) {
-                        // lat = results[0].geometry.location.lat();
-                        // lng = results[0].geometry.location.lng();
-                        resolve([results[0].geometry.location.lat(), results[0].geometry.location.lng()]);
-                    } else {
-                        reject(new Error('location error'));
-                        console.log('location error');
-                    };
-                });
-            });
-        }
-        
-        function processGeocode (location, inputFunction) {
-            let latLng = [];
-            for(let i = 0; i < 1; i++) {
-                latLng.push(inputFunction(location))
-            }
-            return latLng;
-        };
-
-        let locationData = processGeocode(this.state.searchLocation, findGeocode);
+        this.props.receiveLocation(this.state);
+        const locationData = this.processGeocode(this.state.searchLocation, this.findGeocode);
         Promise.all(locationData)
         .then((returnData) => { this.navigateToListingIndex(returnData);
         })
-        
-        this.props.receiveLocation(this.state);
-        // this.navigateToListingIndex(lat, lng);
     };
 
     render() {

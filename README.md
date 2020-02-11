@@ -3,13 +3,17 @@
 MystiCamp
 =
 
-Thank you for visiting MystiCamp. MystiCamp is a single-page, full stack clone of Hipcamp. Users can view listings, see their locations, and view the attributes of each listing.
+Thank you for visiting MystiCamp. MystiCamp is a single-page, full stack clone of Hipcamp. Users can view listings, see their locations, and view the attributes of each listing, search listings by location, and make bookings.
 
 Technologies Implemented:
 =
 - ### Front End: 
    - React
    - Redux
+   - Google Maps API
+   - Javascript
+   - HTML5
+   - CSS3/SCSS
 
  - ### Back End:
    - PostgreSQL
@@ -18,14 +22,21 @@ Technologies Implemented:
 Features:
 =
  - ### User Authenication
+   - User Auth created using BCrypt 
    - Users can securely create an account and log in/log out with ease
    - Demo user log in available for guests
+   - Viewing/deleting bookings is only available under a protected route while logged in
  - ### Listings index page
    - View thumbnail of each listing
    - View subtitle of each listing
+   - Search listings based on location
  - ### Listing show page
    - View listing attributes
-   - View listing location 
+   - View listing location on Google Maps
+   - Make a booking for the listing
+ - ### User Bookings
+   - Logged in user can view their current bookings
+   - Logged in user can cancel any current booking
 
 
 ### One interesting feature worth noting is the polymorphic association implemented like so:
@@ -53,11 +64,37 @@ end
 ```
 This is implemented so that backend and database management will be more clean and manageable.
 
+
+### Search feature utilizes Google Maps Places Autocomplete, Geocoder, and Javascript Promises:
+```Javascript
+findGeocode(location) {
+        return new Promise(function(resolve, reject) {
+            const geocoder = new google.maps.Geocoder();
+            geocoder.geocode({ 'address': location}, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    const lat = results[0].geometry.location.lat();
+                    const lng = results[0].geometry.location.lng();
+                    resolve([lat, lng]);
+                } else {
+                    reject(new Error('location error'));
+                };
+            });
+        });
+    };
+
+    handleSubmit(e) {
+        e.preventDefault();
+        this.props.receiveLocation(this.state);
+        const locationData = this.processGeocode(this.state.searchLocation, this.findGeocode);
+        Promise.all(locationData)
+        .then((returnData) => { this.navigateToListingIndex(returnData);
+        })
+    };
+```
 ---
 ## Future Features Include:
-- Search by location
-- User bookings
-- User comments
+
+- User reviews on listings
 
 
 <!-- This README would normally document whatever steps are necessary to get the

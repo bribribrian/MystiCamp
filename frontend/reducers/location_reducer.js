@@ -1,13 +1,13 @@
-import { RECIEVE_LOCATION } from '../actions/map_actions'
+import { RECEIVE_LOCATION } from '../actions/map_actions'
 
-const locationReducer = ( oldState = {}, action) => {
+const LocationReducer = ( oldState = {}, action) => {
     Object.freeze(oldState);
     switch (action.type) {
-        case RECIEVE_LOCATION:
+        case RECEIVE_LOCATION:
             return Object.assign({}, action.geoLocation)
         default:
             return oldState;
     }
 }
 
-export default locationReducer;
+export default LocationReducer;

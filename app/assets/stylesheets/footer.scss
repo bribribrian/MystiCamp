@@ -19,7 +19,7 @@ footer{
     width: 1113px;
     border-top: 1px solid #ebebeb;
     font-family: helvetica;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
     display: flex;
     justify-content: space-between;
@@ -29,7 +29,8 @@ footer{
         font-weight: 300;
     }
     .footer-text-small {
-        font-size: 10px;
+        margin-left: 3px;
+        font-size: 14px;
         font-weight: 300;
     }
     .footer-space {
@@ -43,11 +44,11 @@ footer{
     .footer-left {
         width: 500px;
         display: flex;
-        align-items: flex-end;
+        align-items: baseline;
         justify-content: space-between;
         }
     .footer-left-container {
-        align-items: flex-end;
+        align-items: baseline;
         display: flex;
         justify-content: space-between;
     }
