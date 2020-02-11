@@ -5,6 +5,7 @@ class CreateBookings < ActiveRecord::Migration[5.2]
       t.string :end_date, null: false
       t.integer :user_id, null: false
       t.integer :listing_id, null: false
+      t.string :listing_name, null: false
       t.decimal :total_price, null: false
       t.integer :num_guests, null: false
 

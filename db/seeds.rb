@@ -289,5 +289,5 @@ listings_join_desert_five = ListingJoin.create!(listing_id: beautiful_place.id, 
 listings_join_desert_six = ListingJoin.create!(listing_id: strange_place.id, attributable_id: desert.id, attributable_type: 'Terrain')
 
 
-demo_user_booking_one = Booking.create!(user_id: demo.id, listing_id: cool_place.id, start_date: "2020/02/10", end_date: "2020/02/12", total_price: 50.99, num_guests: 4)
-demo_user_booking_two = Booking.create!(user_id: demo.id, listing_id: strange_place.id, start_date: "2020/02/10", end_date: "2020/02/12", total_price: 32.99, num_guests: 4)
+demo_user_booking_one = Booking.create!(user_id: demo.id, listing_id: cool_place.id, listing_name: 'Cool Place', start_date: "2020/02/10", end_date: "2020/02/12", total_price: 50.99, num_guests: 4)
+demo_user_booking_two = Booking.create!(user_id: demo.id, listing_id: strange_place.id, listing_name: 'Strange Place', start_date: "2020/02/10", end_date: "2020/02/12", total_price: 32.99, num_guests: 4)

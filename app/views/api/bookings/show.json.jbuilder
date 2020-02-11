@@ -1,9 +1,8 @@
 json.extract! @booking, :id
-json.listingId @booking.listing_id
-json.user @booking.user
-json.listing @booking.listing
-json.userId @booking.user_id
-json.startDate @booking.start_date
-json.endDate @booking.end_date
-json.numGuests @booking.num_guests
-json.totalPrice @booking.total_price
+json.listing_id @booking.listing_id
+json.listing_name @booking.listing_name
+json.user_id @booking.user_id
+json.start_date @booking.start_date
+json.end_date @booking.end_date
+json.num_guests @booking.num_guests
+json.total_price @booking.total_price

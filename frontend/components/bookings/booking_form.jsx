@@ -11,6 +11,7 @@ class BookingForm extends React.Component {
         this.state = {
             user_id: this.props.currentUserId,
             listing_id: this.props.match.params.listingId,
+            listing_name: this.props.listing_name,
             start_date: null,
             end_date: null,
             focusedStart: null,
@@ -56,7 +57,15 @@ class BookingForm extends React.Component {
                 console.log('Booking must have a start and end date!');
                 return 'Booking must have a start and end date!';
             };
-            const booking = {user_id: this.state.user_id, listing_id: listingId, total_price: totalPrice, num_guests: this.state.num_guests, start_date: this.state.start_date.format('YYYY/MM/DD'),  end_date: this.state.end_date.format('YYYY/MM/DD')};
+            const booking = {user_id: this.state.user_id,
+                                listing_id: listingId,
+                                total_price: totalPrice,
+                                num_guests: this.state.num_guests,
+                                start_date: this.state.start_date.format('YYYY/MM/DD'),
+                                end_date: this.state.end_date.format('YYYY/MM/DD'),
+                                listing_name: this.state.listing_name
+            };
+
             this.props.createBooking(booking).then(this.props.history.push(`/users/${this.state.user_id}`));
         };
     };

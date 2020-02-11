@@ -11,10 +11,9 @@ export const createBooking = (booking) => {
     $.ajax({
         url: `api/bookings`,
         method: 'POST',
-        data: {booking}
+        data: {booking},
     })
-    )
-};
+)};
 
 export const deleteBooking = (bookingId) => (
     $.ajax({

@@ -17,7 +17,6 @@ class UserShow extends React.Component {
     }
 
     render() {
-        debugger;
         if (Object.getOwnPropertyNames(this.props.bookings).length === 0) {
             return (
                 null

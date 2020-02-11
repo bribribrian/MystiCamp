@@ -224,7 +224,7 @@ class ListingShow extends React.Component {
                             <div className='cost'><i className="fas fa-dollar-sign"></i>{this.props.listing.cost}</div>
                             <div className='per-night'>per night</div>
                             <div className='dates-booking-container'>
-                                <BookingFormContainer/>
+                                <BookingFormContainer listing_name={this.props.listing.title}/>
                                 {/* <div className='dates-first'>
                                     <div className='dates-first-title'>Check in</div>
                                     <div className='dates-first-sub'>Select date</div>

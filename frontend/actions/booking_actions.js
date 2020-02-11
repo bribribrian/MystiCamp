@@ -32,12 +32,13 @@ export const fetchUserBookings = (userId) => dispatch => {
 
 export const createBooking = (booking) => dispatch => {
     return BookingAPIUtil.createBooking(booking)
-        .then(booking => dispatch(receiveBooking(booking))),
-        error => dispatch(receiveBookingErrors(error.responseJSON))
+        .then(booking => dispatch(receiveBooking(booking)))
+        // .catch(error => dispatch(recieveBookingErrors(error.responseJSON)))
+        // dispatch(receiveBookingErrors(error.responseJSON))
 };
 
 export const deleteBooking = (bookingId) => dispatch => {
     return BookingAPIUtil.deleteBooking(bookingId)
     .then((bookingId) =>dispatch(removeBooking(bookingId))),
-    error => dispatch(recieverBookingErrors(error.responseJSON))
+    error => dispatch(recieveBookingErrors(error.responseJSON))
 };
