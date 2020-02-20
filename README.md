@@ -40,7 +40,7 @@ Features:
  - ### User Bookings
    - Logged in user can view their current bookings
    - Logged in user can cancel any current booking
-<img src='app/assets/images/MC_book_gif.gif'/>
+<img src='app/assets/images/Myst_book.gif'/>
 
 ### One interesting feature worth noting is the polymorphic association implemented like so:
 ```ruby
