@@ -95,7 +95,8 @@ handleSubmit(e) {
 };
 ```
 <img src="https://ootd-dev.s3.amazonaws.com/mysticamp-searchmap-screen-shot.png">
----
+
+
 ## Future Features Include:
 
 - User reviews on listings
