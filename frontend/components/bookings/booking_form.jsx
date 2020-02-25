@@ -24,6 +24,7 @@ class BookingForm extends React.Component {
     this.handleGuestUpdate = this.handleGuestUpdate.bind(this);
     }
 
+
     handleGuestUpdate(num) {
         this.setState({
             num_guests: num
@@ -49,15 +50,14 @@ class BookingForm extends React.Component {
         // }
         totalPrice = 10.99;
         
-        
         if (!this.props.currentUserId) {
             this.props.openModal('login')
         } else {
-            if (!(this.state.start_date) || !(this.state.end_date)) {
-                console.log('Booking must have a start and end date!');
-                return 'Booking must have a start and end date!';
+            if (!(this.state.start_date) || !(this.state.end_date )) {
+                console.log('Booking Error');
+                return 'Booking Error';
             };
-            const booking = {user_id: this.state.user_id,
+            const booking = {user_id: this.props.currentUserId,
                                 listing_id: listingId,
                                 total_price: totalPrice,
                                 num_guests: this.state.num_guests,
@@ -65,8 +65,7 @@ class BookingForm extends React.Component {
                                 end_date: this.state.end_date.format('YYYY/MM/DD'),
                                 listing_name: this.state.listing_name
             };
-
-            this.props.createBooking(booking).then(this.props.history.push(`/users/${this.state.user_id}`));
+            this.props.createBooking(booking).then(this.props.history.push(`/users/${this.props.currentUserId}`));
         };
     };
 
