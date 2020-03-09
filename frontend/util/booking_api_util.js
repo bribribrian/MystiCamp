@@ -7,7 +7,6 @@ export const fetchUserBookings = (userId) => (
   );
 
 export const createBooking = (booking) => {
-    debugger;
     return (
     $.ajax({
         url: `api/bookings`,
